@@ -1,0 +1,689 @@
+@import colors
+
+$transition: .3s
+
+body
+	font-family: 'Proxima Nova', sans-serif
+	font-weight: 300
+	color: $color-body
+	line-height: 1.38
+	&:before 
+		content: ''
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transition: $transition
+		background-color: $color-warning
+		background-image: url(../img/logo-3.svg), url(../img/pace.svg)
+		background-repeat: no-repeat
+		background-position: center center, center bottom
+		background-size: 400px, auto
+		z-index: 9999
+		@media (max-width: 991.98px)
+			background-size: 200px, auto
+
+.pace-container
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: $transition
+.pace-done 
+	&:before 
+		opacity: 0
+		visibility: hidden
+	.pace-container
+		opacity: 1
+		visibility: visible
+
+.pace
+	pointer-events: none
+	user-select: none
+	&-inactive
+		display: none
+	&-progress
+		position: fixed
+		top: 0
+		right: 100%
+		width: 100%
+		border-top: 3px solid #fff
+		z-index: 99999
+
+@import fonts
+
+*
+	outline: none !important
+
+img
+	max-width: 100%
+	height: auto
+
+a 
+	color: $color-info
+	transition: $transition
+	&:hover
+		color: $color-danger
+		text-decoration: none
+
+hr 	
+	border-top-color: $color-hr
+	margin: 0
+
+.btn
+	border-radius: 0
+	padding: 10px 21.5px
+	border: none
+	position: relative
+	box-shadow: none !important
+	@media (min-width: 1200px)
+		padding: 11.5px 28.5px
+		font-size: 20px
+	&:before 
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		border: 1px solid transparent
+		transition: $transition
+		transform: translate(7px, 7px)
+		z-index: -1
+	&:after 
+		content: ''
+		display: inline-block
+		font-size: 0
+		width: 29px
+		height: 18px
+		background-size: cover
+		margin-left: 20px
+		vertical-align: middle
+		transition: $transition
+		@media (max-width: 1199.98px)
+			width: 20px
+			height: 12px
+	&:hover 
+		&:before 	
+			transform: none
+		&:after 
+			transform: translateX(-5px)
+	&:active
+		&:after 
+			transform: translateX(5px)
+.btn-sm 
+	font-size: 1rem
+	padding: 10px 21.5px
+	@media (min-width: 1200px)
+		font-size: 17px
+	&:after 
+		width: 20px
+		height: 12px
+.btn-danger
+	background: linear-gradient(to right, $color-danger, $color-warning)
+	&:before 
+		border-color: $color-danger
+	&:after
+		background-image: url(../img/arrow-white.svg)
+	&.btn-sm
+		background: $color-danger
+.btn-light
+	color: $color-primary !important
+	background: #fff
+	&:before 
+		border-color: #fff
+	&:after
+		background-image: url(../img/arrow.svg)
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1200px
+
+.row-1:not(.no-gutters)
+	margin-left: -9px
+	margin-right: -9px
+	> [class*="col"]
+		padding-left: 9px
+		padding-right: 9px
+
+.fz-90
+	font-size: 90px
+	line-height: 1
+	@media (max-width: 1199.98px)
+		font-size: 65px
+	@media (max-width: 575.98px)
+		font-size: 50px
+.fz-80
+	font-size: 80px
+	line-height: 1
+	@media (max-width: 1199.98px)
+		font-size: 60px
+	@media (max-width: 575.98px)
+		font-size: 40px
+.fz-70
+	font-size: 70px
+	line-height: 1
+	@media (max-width: 1199.98px)
+		font-size: 52px
+	@media (max-width: 575.98px)
+		font-size: 38px
+.fz-60
+	font-size: 60px
+	line-height: 1
+	@media (max-width: 1199.98px)
+		font-size: 46px
+	@media (max-width: 575.98px)
+		font-size: 35px
+.fz-40
+	font-size: 40px
+	line-height: 1.13
+	@media (max-width: 1199.98px)
+		font-size: 30px
+	@media (max-width: 575.98px)
+		font-size: 25px
+.fz-30
+	font-size: 30px
+	line-height: 1.33
+	@media (max-width: 1199.98px)
+		font-size: 24px
+	@media (max-width: 575.98px)
+		font-size: 20px
+.fz-25
+	font-size: 25px
+	line-height: 1.32
+	@media (max-width: 1199.98px)
+		font-size: 20px
+	@media (max-width: 575.98px)
+		font-size: 18px
+.fz-22
+	font-size: 22px
+	line-height: 1.36
+	@media (max-width: 1199.98px)
+		font-size: 18px
+	@media (max-width: 575.98px)
+		font-size: 17px
+.fz-18
+	@media (min-width: 576px)
+		font-size: 18px
+		line-height: 1.22
+	@media (max-width: 575.98px)
+		font-size: 14px
+.fz-14
+	font-size: 14px
+.fz-13
+	font-size: 13px
+.fz-12
+	font-size: 12px
+
+.owl-carousel
+	.owl-stage-outer
+		cursor: ew-resize
+	.owl-item img
+		width: auto
+	.owl-dots
+		font-size: 0
+		position: absolute
+		margin: 0 -12.5px !important
+		.owl-dot
+			margin: 0 12.5px
+			span 
+				background: transparent !important
+				width: 49px
+				margin: 0
+				height: 0
+				border-bottom: 3px solid $color-dot
+				transition: $transition
+				border-radius: 0
+				&:hover 	
+					border-bottom-color: $color-danger
+			&.active
+				span 
+					border-bottom-color: $color-danger
+
+.navbar
+	.navbar-brand
+		max-width: 70%
+		img
+			height: 58px
+	.nav-link
+		color: inherit
+		&:hover
+			color: $color-warning
+	@media (max-width: 1199.98px)
+		.nav-item.active .nav-link
+			color: $color-warning
+	@media (min-width: 1200px)
+		padding-top: 20px
+		padding-bottom: 0
+		.navbar-nav
+			position: relative
+			padding: 8px 0
+			font-size: 18px
+			&:after 	
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 1000px
+				height: 8px
+				background-image: linear-gradient(to right, $color-danger, $color-warning 30%, $color-info 67%, $color-primary)
+			.nav-link
+				padding: 19px 0
+				position: relative
+				&:after 	
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translateX(-50%)
+					border-width: 6px 5px
+					border-style: solid
+					border-color: transparent
+			.nav-item
+				+ .nav-item
+					margin-left: 42.5px
+				&:nth-child(1)
+					.nav-link
+						&:hover 	
+							color: #EB4E1A
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #EB4E1A
+				&:nth-child(2)
+					.nav-link
+						&:hover 	
+							color: #F58817
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #F58817
+				&:nth-child(3)
+					.nav-link
+						&:hover 	
+							color: #FFC509
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #FFC509
+				&:nth-child(4)
+					.nav-link
+						&:hover 	
+							color: #D6C751
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #D6C751
+				&:nth-child(5)
+					.nav-link
+						&:hover 	
+							color: #B7C774
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #B7C774
+				&:nth-child(6)
+					.nav-link
+						&:hover 	
+							color: #91C89B
+					&.active
+						.nav-link
+							&:after
+								border-bottom-color: #91C89B
+
+.navbar-toggler
+	display: inline-block
+	cursor: pointer
+	transition: $transition
+	padding: 0
+	border: 0
+	&:before
+		width: 38px
+		animation-name: sandwich-1
+	span
+		width: 28px
+		animation-name: sandwich-2
+	&:after
+		width: 18px
+		animation-name: sandwich-3
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 8px
+	span, &:before, &:after
+		display: block
+		margin-left: auto
+		transition: $transition
+		transform-origin: right center
+		height: 3px
+		background-color: #fff
+		margin-left: auto
+		animation-timing-function: linear
+		animation-iteration-count: infinite
+		animation-duration: 3s
+	&:hover
+		opacity: .8
+	&.active
+		&:before
+			transform: rotate(-45deg)
+			width: 32px
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: rotate(45deg)
+			width: 32px
+		span, &:before, &:after
+			animation-name: none !important
+@keyframes sandwich-1
+	50%
+		width: 18px
+@keyframes sandwich-2
+	25%
+		width: 23px
+	50%
+		width: 28px
+	75%
+		width: 33px
+@keyframes sandwich-3
+	50%
+		width: 38px
+
+.main-header
+	background: url(../img/hero.jpg) no-repeat center top
+	background-size: cover
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	> .container
+		padding-top: 40px
+		padding-bottom: 119px
+		margin-top: auto
+		margin-bottom: auto
+	.heading-1
+		text-shadow: 0 0 29px rgba(0, 0, 0, 0.55)
+		padding-left: 35px
+		position: relative
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 10px
+			background-image: linear-gradient(to top, $color-danger, $color-warning)
+			opacity: 0
+			transform: translateY(30px)
+			transition: 1s
+			transition-delay: .6s
+		@media (max-width: 991.98px)
+			padding-left: 20px
+			&:before 
+				width: 2px
+	.first, .second
+		opacity: 0
+		transition: .5s
+		transform: translateX(20px)
+	.first	
+		margin-bottom: 21px
+		@media (min-width: 992px)
+			line-height: .7
+	.second 
+		transition-delay: .4s
+		@media (min-width: 992px)
+			line-height: .8
+
+.pace-done
+	.first, .second, .heading-1:before 
+		opacity: 1
+		transform: none
+
+.section-1
+	position: relative
+	z-index: 2
+	> img 
+		position: absolute
+		top: 8px
+		right: -282px
+		width: 848px
+		@media (max-width: 991.98px)
+			right: -100px
+			width: 600px
+	.img-wrap
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			background-image: linear-gradient(94deg, $color-danger, $color-warning)
+			top: -64px
+			right: -65px
+			left: 0
+			height: 405px
+			z-index: -1
+			@media (max-width: 991.98px)
+				height: 200px
+			@media (max-width: 767.98px)
+				top: -20px
+				right: 0
+	.block
+		padding: 84px 74px 46px 63px
+		background: $color-bg url(../img/quote.svg) no-repeat 39px 30px
+		background-size: 118px
+		@media (max-width: 1499.98px)
+			padding: 40px 30px 24px
+		@media (max-width: 575.98px)
+			padding: 30px 15px 12px
+			background-position: 20px 20px
+			background-size: 50px
+
+.section-2
+	padding: 50px 0 70px
+	@media (max-width: 991.98px)
+		padding-top: 70px
+	@media (min-width: 992px)
+		.img 	
+			max-width: initial
+
+.section-3
+	.block
+		padding: 90px 0 175px
+		position: relative
+		flex-grow: 1
+		@media (max-width: 991.98px)
+			padding: 70px 0 80px
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 50vw
+			background-size: cover
+			z-index: -1
+			@media (max-width: 991.98px)
+				width: 100vh
+				left: 50% !important
+				right: auto
+				transform: translateX(-50%)
+		.fz-60
+			&:after 	
+				content: ''
+				display: block
+				height: 30px
+				border-left: 1px solid $color-danger
+				margin: 29px 0 32px
+				@media (max-width: 991.98px)
+					height: 20px
+					margin: 16px 0 20px
+	.block-wrap
+		display: flex
+		flex-direction: column-reverse
+		@media (min-width: 992px)
+			&:before 
+				content: ''
+				display: block
+				width: 219px
+				height: 93px
+		&:first-child
+			&:before 
+				background-color: $color-info
+				@media (min-width: 992px)
+					margin-left: auto
+			> .block
+				&:before 
+					right: 0
+					background-image: url(../img/bg-1.jpg)
+		&:last-child
+			flex-direction: column
+			&:before 
+				background-color: $color-warning
+			> .block
+				&:before 
+					left: 0
+					background-image: url(../img/bg-2.jpg)
+
+.section-4
+	padding: 122px 0 72px
+	@media (max-width: 1199.98px)
+		padding: 70px 0 35px
+	.brands
+		[class*="col"]
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding-top: 14px
+			padding-bottom: 14px
+			+ [class*="col"]
+				border-left: 1px solid $color-hr
+
+.section-5
+	position: relative
+	padding: 72px 0 139px
+	@media (max-width: 1199.98px)
+		padding: 35px 0 70px
+	> img 	
+		position: absolute
+		width: 340px
+		top: 175px
+		right: 15px
+	.owl-wrap	
+		align-items: flex-end
+		&:nth-child(even)
+			@media (min-width: 768px)
+				.owl-dots
+					right: 0
+				.block
+					margin-left: -118px
+		&:nth-child(odd)
+			margin-top: 55px
+			@media (min-width: 768px)
+				flex-direction: row-reverse
+				.block
+					margin-right: -118px
+	.block
+		margin-bottom: 70px
+		@media (max-width: 1199.98px)
+			margin-bottom: 40px
+		.owl-dots 
+			bottom: -70px
+			@media (max-width: 1199.98px)
+				bottom: -40px
+		.slide
+			position: relative
+			padding: 67px 75px 41px 52px
+			@media (max-width: 1199.98px)
+				padding: 50px 30px 20px
+			@media (max-width: 575.98px)
+				padding: 45px 20px 10px
+		.info
+			position: absolute
+			color: #fff
+			font-size: 18px
+			font-weight: bold
+			text-transform: uppercase
+			padding: 14.5px 23px
+			margin-top: -27px
+
+.section-6
+	background: url(../img/bg-op.png) no-repeat center 60%, linear-gradient(181deg, #f3f3f3, #fff)
+	padding: 86px 0 61px
+	@media (max-width: 1199.98px)
+		padding: 70px 0 34px
+	.block
+		padding: 86px 15px 73px
+		background-image: url(../img/bg-5.jpg)
+		background-size: cover
+		position: relative
+		z-index: 2
+		margin-top: 78px
+		@media (max-width: 1199.98px)
+			margin-top: 54px
+
+.card-my
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	height: 100%
+	transition: $transition
+	.card-my-body
+		padding: 36px 28px 50px
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+		position: relative
+		z-index: 2
+		@media (max-width: 1199.98px)
+			padding: 20px 20px 27px
+
+.section-7
+	position: relative
+	padding-top: 61px
+	@media (max-width: 1199.98px)
+		padding-top: 35px
+	> img 
+		position: absolute
+		width: 253px
+		top: 46px
+		left: 100px
+		opacity: .4
+	.img-wrap
+		position: relative
+		.text
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			padding: 20px 40px 40px
+			@media (max-width: 1199.98px)
+				padding: 15px
+
+.page-footer
+	color: $color-footer
+	padding: 90px 0 45px
+	background-color: #000
+	.row:not(.no-gutters)
+		margin-left: -15px
+		margin-right: -15px
+		> [class*="col"]
+			padding-left: 15px
+			padding-right: 15px
+	ul 
+		li 
+			margin-bottom: 10px
+			a 
+				color: inherit
+				&:hover 
+					color: $color-info
+	.footer-bottom
+		margin-top: 27px
+		padding-top: 28px
+		border-top: 1px solid #3a3a3a
+		.row:not(.no-gutters)
+			margin-left: -11px
+			margin-right: -11px
+			> [class*="col"]
+				padding-left: 11px
+				padding-right: 11px
+		a:not(:hover)
+			color: #fff
+	@media (max-width: 1199.98px)
+		padding: 70px 0 32px

@@ -1,0 +1,376 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1864 426.01">
+    <defs>
+        <style>
+        	rect {
+        		fill: transparent;
+        	}
+	        .cls-1 {
+            fill: #fff;
+            fill-rule: evenodd;
+            isolation: isolate;
+	        }
+	        .cls-1 {
+						animation-name: transform;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;
+						opacity: 0;
+	        }
+	        @keyframes transform {
+	        	20% {
+	        		opacity: 1;
+	        	}
+	        	80% {
+	        		opacity: 1;
+	        	}
+	        	100% {
+	        		opacity: 0;
+							transform: translateY(-200px)
+	        	}
+	        }
+	        .cls-1:nth-child(1) {
+						animation-duration: 3s;
+	        }
+	        .cls-1:nth-child(2) {
+						animation-duration: 6s;
+						animation-delay: .4s;
+	        }
+	        .cls-1:nth-child(3) {
+						animation-duration: 5s;
+	        }
+	        .cls-1:nth-child(4) {
+						animation-duration: 4s;
+	        }
+	        .cls-1:nth-child(5) {
+						animation-duration: 7.51s;
+						animation-delay: .3s;
+	        }
+	        .cls-1:nth-child(6) {
+						animation-duration: 5.58s;
+	        }
+	        .cls-1:nth-child(7) {
+						animation-duration: 3.52s;
+	        }
+	        .cls-1:nth-child(8) {
+						animation-duration: 3.35s;
+	        }
+	        .cls-1:nth-child(9) {
+						animation-duration: 5.49s;
+	        }
+	        .cls-1:nth-child(10) {
+						animation-duration: 4.52s;
+	        }
+	        .cls-1:nth-child(11) {
+						animation-duration: 5.64s;
+	        }
+	        .cls-1:nth-child(12) {
+						animation-duration: 5.79s;
+						animation-delay: .15s;
+	        }
+	        .cls-1:nth-child(13) {
+						animation-duration: 4.97s;
+						animation-delay: .2s;
+	        }
+	        .cls-1:nth-child(14) {
+						animation-duration: 4.14s;
+	        }
+	        .cls-1:nth-child(15) {
+						animation-duration: 7.52s;
+	        }
+	        .cls-1:nth-child(16) {
+						animation-duration: 3.39s;
+	        }
+	        .cls-1:nth-child(17) {
+						animation-duration: 3.24s;
+						animation-delay: .1s;
+	        }
+	        .cls-1:nth-child(18) {
+						animation-duration: 5.67s;
+	        }
+	        .cls-1:nth-child(19) {
+						animation-duration: 7.73s;
+	        }
+	        .cls-1:nth-child(20) {
+						animation-duration: 4.34s;
+	        }
+	        .cls-1:nth-child(21) {
+						animation-duration: 3.65s;
+	        }
+	        .cls-1:nth-child(22) {
+						animation-duration: 4.17s;
+	        }
+	        .cls-1:nth-child(23) {
+						animation-duration: 5.91s;
+	        }
+	        .cls-1:nth-child(24) {
+						animation-duration: 3.23s;
+						animation-delay: .2s;
+	        }
+	        .cls-1:nth-child(25) {
+						animation-duration: 3.64s;
+	        }
+	        .cls-1:nth-child(26) {
+						animation-duration: 4.65s;
+	        }
+	        .cls-1:nth-child(27) {
+						animation-duration: 4.02s;
+	        }
+	        .cls-1:nth-child(28) {
+						animation-duration: 3.08s;
+	        }
+	        .cls-1:nth-child(29) {
+						animation-duration: 7.04s;
+	        }
+	        .cls-1:nth-child(30) {
+						animation-duration: 5.11s;
+	        }
+	        .cls-1:nth-child(31) {
+						animation-duration: 3.99s;
+	        }
+	        .cls-1:nth-child(32) {
+						animation-duration: 3.15s;
+	        }
+	        .cls-1:nth-child(33) {
+						animation-duration: 6.91s;
+	        }
+	        .cls-1:nth-child(34) {
+						animation-duration: 5.23s;
+						animation-delay: .18s;
+	        }
+	        .cls-1:nth-child(35) {
+						animation-duration: 5.64s;
+	        }
+	        .cls-1:nth-child(36) {
+						animation-duration: 4.65s;
+	        }
+	        .cls-1:nth-child(37) {
+						animation-duration: 4.98s;
+						animation-delay: .25s;
+	        }
+	        .cls-1:nth-child(38) {
+						animation-duration: 3.23s;
+	        }
+	        .cls-1:nth-child(39) {
+						animation-duration: 6.04s;
+	        }
+	        .cls-1:nth-child(40) {
+						animation-duration: 7.11s;
+	        }
+	        .cls-1:nth-child(41) {
+						animation-duration: 5.99s;
+						animation-delay: .11s;
+	        }
+	        .cls-1:nth-child(42) {
+						animation-duration: 6.34s;
+	        }
+	        .cls-1:nth-child(43) {
+						animation-duration: 5.91s;
+	        }
+	        .cls-1:nth-child(44) {
+						animation-duration: 7.83s;
+	        }
+	        .cls-1:nth-child(45) {
+						animation-duration: 7.23s;
+	        }
+	        .cls-1:nth-child(46) {
+						animation-duration: 7.01s;
+	        }
+	        .cls-1:nth-child(47) {
+						animation-duration: 7s;
+						animation-delay: .24s;
+	        }
+	        .cls-1:nth-child(48) {
+						animation-duration: 8s;
+	        }
+	        .cls-1:nth-child(49) {
+						animation-duration: 6.85s;
+	        }
+	        .cls-1:nth-child(50) {
+						animation-duration: 7.45s;
+	        }
+	        .cls-1:nth-child(51) {
+						animation-duration: 5.99s;
+	        }
+	        .cls-1:nth-child(52) {
+						animation-duration: 6.34s;
+	        }
+	        .cls-1:nth-child(53) {
+						animation-duration: 7.23s;
+						animation-delay: .18s;
+	        }
+	        .cls-1:nth-child(54) {
+						animation-duration: 4.23s;
+	        }
+	        .cls-1:nth-child(55) {
+						animation-duration: 3.91s;
+	        }
+	        .cls-1:nth-child(56) {
+						animation-duration: 5.99s;
+	        }
+	        .cls-1:nth-child(57) {
+						animation-duration: 3.65s;
+						animation-delay: .13s;
+	        }
+	        .cls-1:nth-child(58) {
+						animation-duration: 4.05s;
+	        }
+	        .cls-1:nth-child(59) {
+						animation-duration: 6.03s;
+	        }
+	        .cls-1:nth-child(60) {
+						animation-duration: 5.80s;
+	        }
+	        .cls-1:nth-child(61) {
+						animation-duration: 3.98s;
+	        }
+	        .cls-1:nth-child(62) {
+						animation-duration: 4.34s;
+	        }
+	        .cls-1:nth-child(63) {
+						animation-duration: 5.34s;
+	        }
+	        .cls-1:nth-child(64) {
+						animation-duration: 6.74s;
+	        }
+	        .cls-1:nth-child(65) {
+						animation-duration: 7.34s;
+	        }
+	        .cls-1:nth-child(66) {
+						animation-duration: 5.46s;
+						animation-delay: .21s;
+	        }
+	        .cls-1:nth-child(67) {
+						animation-duration: 4.34s;
+	        }
+	        .cls-1:nth-child(68) {
+						animation-duration: 7.32s;
+	        }
+	        .cls-1:nth-child(69) {
+						animation-duration: 6.93s;
+	        }
+	        .cls-1:nth-child(70) {
+						animation-duration: 7.80s;
+	        }
+	        .cls-1:nth-child(71) {
+						animation-duration: 5.23s;
+						animation-delay: .22s;
+	        }
+	        .cls-1:nth-child(72) {
+						animation-duration: 3.99s;
+	        }
+	        .cls-1:nth-child(73) {
+						animation-duration: 4.47s;
+	        }
+	        .cls-1:nth-child(74) {
+						animation-duration: 5.94s;
+	        }
+	        .cls-1:nth-child(75) {
+						animation-duration: 6.44s;
+	        }
+	        .cls-1:nth-child(76) {
+						animation-duration: 5.55s;
+	        }
+	        .cls-1:nth-child(77) {
+						animation-duration: 4.44s;
+	        }
+	        .cls-1:nth-child(78) {
+						animation-duration: 7.77s;
+						animation-delay: .26s;
+	        }
+	        .cls-1:nth-child(79) {
+						animation-duration: 6.66s;
+						animation-delay: .2s;
+	        }
+	        .cls-1:nth-child(80) {
+						animation-duration: 3.33s;
+	        }
+        </style>
+    </defs>
+    <title>Ресурс 1</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Слой_1-2" data-name="Слой 1">
+            <g id="Слой_1-2-2" data-name="Слой 1-2">
+                <polygon class="cls-1" points="801 426.01 813.5 397 826 426.01 801 426.01" />
+                <polygon class="cls-1" points="794.5 346 799 356.01 790 356.01 794.5 346 794.5 346" />
+                <polygon class="cls-1" points="780.5 264 789 283.01 772 283.01 780.5 264 780.5 264" />
+                <polygon class="cls-1" points="784 349.01 764 349.01 774 327 784 349.01" />
+                <polygon class="cls-1" points="754.5 245 759 255.01 750 255.01 754.5 245" />
+                <polygon class="cls-1" points="718.5 381 726 398.01 711 398.01 718.5 381 718.5 381" />
+                <polygon class="cls-1" points="678.5 288 685 302.01 672 302.01 678.5 288" />
+                <polygon class="cls-1" points="648 390 664 426.01 632 426.01 648 390" />
+                <polygon class="cls-1" points="633.5 330 641 347.01 626 347.01 633.5 330" />
+                <polygon class="cls-1" points="595 210 604 230.01 586 230.01 595 210" />
+                <polygon class="cls-1" points="593 303.01 584 303.01 588.5 293 593 303.01" />
+                <polygon class="cls-1" points="537.5 333 550 360.01 525 360.01 537.5 333" />
+                <polygon class="cls-1" points="501.5 244 506 254.01 497 254.01 501.5 244" />
+                <polygon class="cls-1" points="484 275 491 290.01 477 290.01 484 275" />
+                <polygon class="cls-1" points="459 393.01 475 357 491 393.01 459 393.01" />
+                <polygon class="cls-1" points="431 299 437 312.01 425 312.01 431 299" />
+                <polygon class="cls-1" points="409 395.01 418.5 375 428 395.01 409 395.01" />
+                <polygon class="cls-1" points="400.5 276 408 292.01 393 292.01 400.5 276" />
+                <polygon class="cls-1" points="349 240 353 249.01 345 249.01 349 240" />
+                <polygon class="cls-1" points="336 366.01 343.5 350 351 366.01 336 366.01" />
+                <polygon class="cls-1" points="330.5 320 338 336.01 323 336.01 330.5 320" />
+                <polygon class="cls-1" points="308 260 312 269.01 304 269.01 308 260" />
+                <polygon class="cls-1" points="285.5 344 295 365.01 276 365.01 285.5 344" />
+                <polygon class="cls-1" points="247.5 260 259 285.01 236 285.01 247.5 260" />
+                <polygon class="cls-1" points="253 332.01 245 332.01 249 323 253 332.01 253 332.01" />
+                <polygon class="cls-1" points="258 393.01 226 393.01 242 357 258 393.01" />
+                <polygon class="cls-1" points="196 362 204 380.01 188 380.01 196 362" />
+                <polygon class="cls-1" points="193 255.01 197 264.01 189 264.01 193 255.01" />
+                <polygon class="cls-1" points="163 402 169 416.01 157 416.01 163 402" />
+                <polygon class="cls-1" points="163.5 218 167 226.01 160 226.01 163.5 218 163.5 218" />
+                <polygon class="cls-1" points="143.5 350 151 367.01 136 367.01 143.5 350" />
+                <polygon class="cls-1" points="139.5 296 143 304.01 136 304.01 139.5 296 139.5 296" />
+                <polygon class="cls-1" points="91 390 107 426.01 75 426.01 91 390" />
+                <polygon class="cls-1" points="66.5 320 73 334.01 60 334.01 66.5 320" />
+                <polygon class="cls-1" points="8.5 399 16 416.01 1 416.01 8.5 399 8.5 399" />
+                <polygon class="cls-1" points="4 340 8 349.01 0 349.01 4 340 4 340" />
+                <polygon class="cls-1" points="331 426.01 291 426.01 311 383.02 331 426.01" />
+                <polygon class="cls-1" points="1845 297 1861 333.01 1829 333.01 1845 297" />
+                <polygon class="cls-1" points="1788.5 375 1798 395.01 1779 395.01 1788.5 375" />
+                <polygon class="cls-1" points="1777.5 233 1790 260.01 1765 260.01 1777.5 233" />
+                <polygon class="cls-1" points="1741.5 344 1750 363.01 1733 363.01 1741.5 344" />
+                <polygon class="cls-1" points="1715.5 325 1720 335.01 1711 335.01 1715.5 325 1715.5 325" />
+                <polygon class="cls-1" points="1682.5 397 1695 426.01 1670 426.01 1682.5 397 1682.5 397" />
+                <polygon class="cls-1" points="1663.5 346 1668 356.01 1659 356.01 1663.5 346" />
+                <polygon class="cls-1" points="1649.5 264 1658 283.01 1641 283.01 1649.5 264" />
+                <polygon class="cls-1" points="1653 349.01 1633 349.01 1643 327 1653 349.01" />
+                <polygon class="cls-1" points="1623.5 245 1628 255.01 1619 255.01 1623.5 245" />
+                <polygon class="cls-1" points="1587.5 381 1595 398.01 1580 398.01 1587.5 381" />
+                <polygon class="cls-1" points="1547.5 288 1554 302.01 1541 302.01 1547.5 288" />
+                <polygon class="cls-1" points="1517 390 1533 426.01 1501 426.01 1517 390" />
+                <polygon class="cls-1" points="1502.5 330 1510 347.01 1495 347.01 1502.5 330" />
+                <polygon class="cls-1" points="1464 210 1473 230.01 1455 230.01 1464 210" />
+                <polygon class="cls-1" points="1462 303.01 1453 303.01 1457.5 293 1462 303.01" />
+                <polygon class="cls-1" points="1406.5 333 1419 360.01 1394 360.01 1406.5 333" />
+                <polygon class="cls-1" points="1370.5 244 1375 254.01 1366 254.01 1370.5 244" />
+                <polygon class="cls-1" points="1353 275 1360 290.01 1346 290.01 1353 275" />
+                <polygon class="cls-1" points="1328 393.01 1344 357 1360 393.01 1328 393.01 1328 393.01" />
+                <polygon class="cls-1" points="1300 299 1306 312.01 1294 312.01 1300 299" />
+                <polygon class="cls-1" points="1278 395.01 1287.5 375 1297 395.01 1278 395.01" />
+                <polygon class="cls-1" points="1269.5 276 1277 292.01 1262 292.01 1269.5 276" />
+                <polygon class="cls-1" points="1218 240 1222 249.01 1214 249.01 1218 240" />
+                <polygon class="cls-1" points="1205 366.01 1212.5 350 1220 366.01 1205 366.01" />
+                <polygon class="cls-1" points="1199.5 320 1207 336.01 1192 336.01 1199.5 320" />
+                <polygon class="cls-1" points="1177 260 1181 269.01 1173 269.01 1177 260" />
+                <polygon class="cls-1" points="1154.5 344 1164 365.01 1145 365.01 1154.5 344 1154.5 344" />
+                <polygon class="cls-1" points="1116.5 260 1128 285.01 1105 285.01 1116.5 260" />
+                <polygon class="cls-1" points="1122 332.01 1114 332.01 1118 323 1122 332.01" />
+                <polygon class="cls-1" points="1127 393.01 1095 393.01 1111 357 1127 393.01" />
+                <polygon class="cls-1" points="1065 362 1073 380.01 1057 380.01 1065 362 1065 362" />
+                <polygon class="cls-1" points="1062 255.01 1066 264.01 1058 264.01 1062 255.01" />
+                <polygon class="cls-1" points="1032 402 1038 416.01 1026 416.01 1032 402" />
+                <polygon class="cls-1" points="1032.5 218 1036 226.01 1029 226.01 1032.5 218" />
+                <polygon class="cls-1" points="1012.5 350 1020 367.01 1005 367.01 1012.5 350 1012.5 350" />
+                <polygon class="cls-1" points="1008.5 296 1012 304.01 1005 304.01 1008.5 296" />
+                <polygon class="cls-1" points="960 390 976 426.01 944 426.01 960 390 960 390" />
+                <polygon class="cls-1" points="935.5 320 942 334.01 929 334.01 935.5 320 935.5 320" />
+                <polygon class="cls-1" points="877.5 399 885 416.01 870 416.01 877.5 399 877.5 399" />
+                <polygon class="cls-1" points="873 340 877 349.01 869 349.01 873 340" />
+                <polygon class="cls-1" points="1200 426.01 1160 426.01 1180 383.02 1200 426.01" />
+                <polygon class="cls-1" points="1864 426.01 1832 426.01 1848 390 1864 426.01" />
+            </g>
+            <rect width="10" height="10" />
+        </g>
+    </g>
+</svg>
