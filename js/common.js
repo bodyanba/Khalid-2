@@ -9,6 +9,6 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // $(window).enllax();
+  $(window).enllax();
 
 });

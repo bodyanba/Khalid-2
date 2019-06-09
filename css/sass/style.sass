@@ -446,6 +446,7 @@ hr
 		top: 8px
 		right: -282px
 		width: 848px
+		z-index: -1
 		@media (max-width: 991.98px)
 			right: -100px
 			width: 600px
@@ -469,12 +470,20 @@ hr
 		padding: 84px 74px 46px 63px
 		background: $color-bg url(../img/quote.svg) no-repeat 39px 30px
 		background-size: 118px
+		animation: quote linear infinite 4s
 		@media (max-width: 1499.98px)
 			padding: 40px 30px 24px
 		@media (max-width: 575.98px)
 			padding: 30px 15px 12px
 			background-position: 20px 20px
 			background-size: 50px
+@keyframes quote
+	50%
+		background-position: 49px 30px
+@media (max-width: 575.98px)
+	@keyframes quote
+		50%
+			background-position: 30px 20px
 
 .section-2
 	padding: 50px 0 70px
@@ -624,6 +633,21 @@ hr
 	flex-direction: column
 	height: 100%
 	transition: $transition
+	.img-wrap
+		position: relative
+		&:after 	
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: -1px
+			left: 0
+			background-image: url(../img/svg-white.svg)
+			background-repeat: no-repeat
+			background-position: center bottom
+			transition: 1s
+			opacity: 0
+			transform: translateY(10px)
 	.card-my-body
 		padding: 36px 28px 50px
 		flex-grow: 1
@@ -633,6 +657,13 @@ hr
 		z-index: 2
 		@media (max-width: 1199.98px)
 			padding: 20px 20px 27px
+	&:hover 
+		transform: translateY(-10px)
+		box-shadow: 0 5px 10px rgba(0, 0, 0, .05)
+		.img-wrap
+			&:after 
+				opacity: .7
+				transform: none
 
 .section-7
 	position: relative

@@ -487,7 +487,8 @@ hr {
     position: absolute;
     top: 8px;
     right: -282px;
-    width: 848px; }
+    width: 848px;
+    z-index: -1; }
     @media (max-width: 991.98px) {
       .section-1 > img {
         right: -100px;
@@ -513,7 +514,8 @@ hr {
   .section-1 .block {
     padding: 84px 74px 46px 63px;
     background: #f7f7f7 url(../img/quote.svg) no-repeat 39px 30px;
-    background-size: 118px; }
+    background-size: 118px;
+    animation: quote linear infinite 4s; }
     @media (max-width: 1499.98px) {
       .section-1 .block {
         padding: 40px 30px 24px; } }
@@ -523,6 +525,13 @@ hr {
         background-position: 20px 20px;
         background-size: 50px; } }
 
+@keyframes quote {
+  50% {
+    background-position: 49px 30px; } }
+@media (max-width: 575.98px) {
+  @keyframes quote {
+    50% {
+      background-position: 30px 20px; } } }
 .section-2 {
   padding: 50px 0 70px; }
   @media (max-width: 991.98px) {
@@ -678,6 +687,21 @@ hr {
   flex-direction: column;
   height: 100%;
   transition: 0.3s; }
+  .card-my .img-wrap {
+    position: relative; }
+    .card-my .img-wrap:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      background-image: url(../img/svg-white.svg);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: 1s;
+      opacity: 0;
+      transform: translateY(10px); }
   .card-my .card-my-body {
     padding: 36px 28px 50px;
     flex-grow: 1;
@@ -688,6 +712,12 @@ hr {
     @media (max-width: 1199.98px) {
       .card-my .card-my-body {
         padding: 20px 20px 27px; } }
+  .card-my:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); }
+    .card-my:hover .img-wrap:after {
+      opacity: 0.7;
+      transform: none; }
 
 .section-7 {
   position: relative;
