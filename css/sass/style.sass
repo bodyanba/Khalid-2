@@ -247,8 +247,13 @@ hr
 			height: 58px
 	.nav-link
 		color: inherit
+		span
+			display: block
+			transition: transform $transition
 		&:hover
 			color: $color-warning
+			span
+				transform: translateY(-5px)
 	@media (max-width: 1199.98px)
 		.nav-item.active .nav-link
 			color: $color-warning
@@ -390,7 +395,6 @@ hr
 		width: 38px
 
 .main-header
-	background: url(../img/hero.jpg) no-repeat center top
 	background-size: cover
 	display: flex
 	flex-direction: column
@@ -416,6 +420,7 @@ hr
 			transform: translateY(30px)
 			transition: 1s
 			transition-delay: .6s
+			animation: pulse linear infinite 3s
 		@media (max-width: 991.98px)
 			padding-left: 20px
 			&:before 
@@ -432,6 +437,10 @@ hr
 		transition-delay: .4s
 		@media (min-width: 992px)
 			line-height: .8
+@keyframes pulse
+	50%
+		top: -10px
+		bottom: -10px
 
 .pace-done
 	.first, .second, .heading-1:before 
@@ -513,16 +522,30 @@ hr
 				left: 50% !important
 				right: auto
 				transform: translateX(-50%)
-		.fz-60
-			&:after 	
+		.scroll
+			height: 30px
+			margin: 29px 0 32px
+			position: relative
+			@media (max-width: 991.98px)
+				height: 20px
+				margin: 16px 0 20px
+			&:before, &:after	
 				content: ''
 				display: block
-				height: 30px
+				height: 100%
 				border-left: 1px solid $color-danger
-				margin: 29px 0 32px
-				@media (max-width: 991.98px)
-					height: 20px
-					margin: 16px 0 20px
+				animation-duration: 3.5s
+				animation-iteration-count: infinite
+				animation-fill-mode: forwards
+				animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1)
+			&:before
+				transform-origin: 0 100%
+				animation-name: scroll-1
+			&:after	
+				transform-origin: 0 0
+				animation-name: scroll-2
+				position: absolute
+				top: 0
 	.block-wrap
 		display: flex
 		flex-direction: column-reverse
@@ -532,6 +555,7 @@ hr
 				display: block
 				width: 219px
 				height: 93px
+				animation: width linear infinite 20s
 		&:first-child
 			&:before 
 				background-color: $color-info
@@ -549,6 +573,23 @@ hr
 				&:before 
 					left: 0
 					background-image: url(../img/bg-2.jpg)
+@keyframes scroll-1
+	0%
+		transform: translateY(0) scaleY(1)
+	40%
+		transform: translateY(10px) scaleY(0)
+	to
+		transform: translateY(10px) scaleY(0)
+@keyframes scroll-2
+	0%
+		transform: translateY(-15px) scaleY(0)
+	60%
+		transform: translateY(-15px) scaleY(0)
+	to
+		transform: translateY(0) scaleY(1)
+@keyframes width
+	50%
+		width: 300px
 
 .section-4
 	padding: 122px 0 72px
@@ -556,13 +597,15 @@ hr
 		padding: 70px 0 35px
 	.brands
 		[class*="col"]
-			display: flex
-			flex-direction: column
-			justify-content: center
 			padding-top: 14px
 			padding-bottom: 14px
 			+ [class*="col"]
 				border-left: 1px solid $color-hr
+			> div
+				height: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
 
 .section-5
 	position: relative
@@ -613,13 +656,21 @@ hr
 			margin-top: -27px
 
 .section-6
-	background: url(../img/bg-op.png) no-repeat center 60%, linear-gradient(181deg, #f3f3f3, #fff)
+	background-image: linear-gradient(181deg, #f3f3f3, #fff)
 	padding: 86px 0 61px
+	position: relative
 	@media (max-width: 1199.98px)
 		padding: 70px 0 34px
+	> span 	
+		position: absolute
+		top: 43%
+		left: 50%
+		transform: translateX(-50%)
+		img 
+			max-width: initial
 	.block
 		padding: 86px 15px 73px
-		background-image: url(../img/bg-5.jpg)
+		background-image: linear-gradient(to bottom, rgba(96, 45, 144, .5), rgba(96, 45, 144, .95)), url(../img/bg-5.jpg)
 		background-size: cover
 		position: relative
 		z-index: 2
@@ -635,6 +686,9 @@ hr
 	transition: $transition
 	.img-wrap
 		position: relative
+		overflow: hidden
+		img
+			transition: $transition
 		&:after 	
 			content: ''
 			position: absolute
@@ -661,6 +715,8 @@ hr
 		transform: translateY(-10px)
 		box-shadow: 0 5px 10px rgba(0, 0, 0, .05)
 		.img-wrap
+			img 	
+				transform: scale(1.1, 1.1)
 			&:after 
 				opacity: .7
 				transform: none
@@ -678,14 +734,35 @@ hr
 		opacity: .4
 	.img-wrap
 		position: relative
+		overflow: hidden
+		img 	
+			transition: $transition
 		.text
+			opacity: 0
 			position: absolute
+			top: 0
 			right: 0
 			bottom: 0
 			left: 0
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
 			padding: 20px 40px 40px
+			transition: $transition
+			background-image: linear-gradient(1deg, rgba(238, 88, 38, 1), rgba(255, 198, 11, .5)), linear-gradient(137deg, rgba(238, 88, 38, .5),  rgba(255, 198, 11, .5))
 			@media (max-width: 1199.98px)
 				padding: 15px
+			> *
+				transition: $transition
+				transform: translateY(20px)
+		&:hover 	
+			img
+				filter: grayscale(1)
+				transform: scale(1.1, 1.1)
+			.text
+				opacity: 1
+				> *
+					transform: none
 
 .page-footer
 	color: $color-footer
