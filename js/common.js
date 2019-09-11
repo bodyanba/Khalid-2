@@ -20,4 +20,22 @@ $(document).ready(function () {
     disable: 'mobile'
   });
 
+  $(window).on("scroll", function() {
+    if ($(this).scrollTop() >= 1) {
+      $('.fixed-top').addClass("navbar-bg");
+    } else {
+      $('.fixed-top').removeClass("navbar-bg");
+    }
+  });
+
+  function footer() {
+    var height = $(".page-footer").outerHeight();
+    $(".footer-wrapper").outerHeight(height);
+  };
+
+  footer();
+  $(window).on("resize", function() {
+    footer();
+  });
+
 });
