@@ -5,6 +5,7 @@ $(document).ready(function () {
     smartSpeed: 1000,
     loop: true,
     autoplay: true,
+    margin: 20
   });
 
   $(".navbar-toggler").on("click", function() {

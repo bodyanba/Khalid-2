@@ -77,15 +77,13 @@ hr
 
 .btn
 	border-radius: 0
-	padding: 10px 21.5px
+	padding: 13.5px 28px 13.5px 31px
 	border: none
 	position: relative
 	text-transform: uppercase
 	font-weight: bold
 	box-shadow: none !important
-	@media (min-width: 1200px)
-		padding: 13.5px 28px 13.5px 31px
-		font-size: 17px
+	font-size: 17px
 	span 
 		vertical-align: middle
 	&:before 
@@ -109,9 +107,6 @@ hr
 		margin-left: 22px
 		vertical-align: middle
 		transition: $transition
-		@media (max-width: 1199.98px)
-			width: 20px
-			height: 12px
 	&:hover 
 		&:before 	
 			transform: none
@@ -564,7 +559,7 @@ hr
 		@media (max-width: 991.98px)
 			padding-left: 20px
 			&:before 
-				width: 2px
+				width: 3px
 	.first, .second
 		opacity: 0
 		transition: .5s
@@ -654,6 +649,7 @@ hr
 	@media (min-width: 992px)
 		.img 	
 			max-width: initial
+			height: 658px
 
 .section-3
 	.block
@@ -661,7 +657,7 @@ hr
 		position: relative
 		flex-grow: 1
 		@media (max-width: 991.98px)
-			padding: 70px 0 80px
+			padding: 70px 0
 		&:before 
 			content: ''
 			position: absolute
@@ -776,8 +772,9 @@ hr
 		width: 340px
 		top: 175px
 		right: 15px
-	.owl-wrap	
-		align-items: flex-end
+	.owl-1
+		.owl-wrap	
+			align-items: flex-end
 		&:nth-child(even)
 			@media (min-width: 768px)
 				.owl-dots
@@ -786,18 +783,21 @@ hr
 					margin-left: -118px
 		&:nth-child(odd)
 			margin-top: 55px
-			@media (min-width: 768px)
-				flex-direction: row-reverse
-				.block
-					margin-right: -118px
+			.owl-wrap
+				@media (min-width: 768px)
+					flex-direction: row-reverse
+					.block
+						margin-right: -118px
+		.owl-dots 
+			bottom: 0
 	.block
 		margin-bottom: 70px
 		@media (max-width: 1199.98px)
 			margin-bottom: 40px
-		.owl-dots 
-			bottom: -70px
-			@media (max-width: 1199.98px)
-				bottom: -40px
+		// .owl-dots 
+		// 	bottom: -70px
+		// 	@media (max-width: 1199.98px)
+		// 		bottom: -40px
 		.slide
 			position: relative
 			padding: 56px 75px 41px 52px
@@ -817,7 +817,7 @@ hr
 			text-align: center
 
 .section-6
-	padding: 86px 0 61px
+	padding: 110px 0 56px
 	position: relative
 	@media (max-width: 1199.98px)
 		padding: 70px 0 34px
@@ -829,24 +829,28 @@ hr
 		img 
 			max-width: initial
 	.block
-		padding: 86px 15px 73px
+		margin-top: 107px
+		padding: 75px 15px 47px
 		background-image: linear-gradient(to bottom, rgba(96, 45, 144, .5), rgba(96, 45, 144, .95)), url(../img/bg-5.jpg)
 		background-size: cover
 		position: relative
 		z-index: 2
-		margin-top: 78px
 		@media (max-width: 1199.98px)
 			margin-top: 54px
 
 .card-my
-	background-color: #fff
-	display: flex
+	display: flex 
 	flex-direction: column
+	background-color: $color-bg-3
 	height: 100%
-	transition: $transition
+	transition: none
+	font-size: 17px
+	color: inherit
+	position: relative
+	overflow: hidden
 	.img-wrap
-		position: relative
 		overflow: hidden
+		position: relative
 		img
 			transition: $transition
 		&:after 	
@@ -854,36 +858,45 @@ hr
 			position: absolute
 			top: 0
 			right: 0
-			bottom: -1px
+			bottom: 0
 			left: 0
-			background-image: url(../img/svg-white.svg)
-			background-repeat: no-repeat
-			background-position: center bottom
-			transition: 1s
+			background-image: linear-gradient(to bottom, transparent, $color-primary 61%)
 			opacity: 0
-			transform: translateY(10px)
 	.card-my-body
-		padding: 36px 28px 50px
+		padding: 26px 31px 1px
 		flex-grow: 1
-		display: flex
-		flex-direction: column
-		position: relative
-		z-index: 2
 		@media (max-width: 1199.98px)
-			padding: 20px 20px 27px
+			padding-left: 20px
+			padding-right: 20px
+		.descr
+			display: none
+			color: #cfc0de
+			transition: $transition
 	&:hover 
-		transform: translateY(-10px)
-		box-shadow: 0 5px 10px rgba(0, 0, 0, .05)
+		color: #fff
 		.img-wrap
 			img 	
 				transform: scale(1.1, 1.1)
 			&:after 
-				opacity: .7
-				transform: none
+				opacity: 1
+		.card-my-body
+			margin-top: -81px
+			background-color: $color-primary
+			position: relative
+			padding-top: 0
+			@media (max-width: 767.98px)
+				margin-top: -44px
+			.text-gray
+				color: #b895da !important
+			.fz-30
+				margin-bottom: 22px
+			.descr
+				display: block
+				margin-bottom: 20px
 
 .section-7
 	position: relative
-	padding-top: 61px
+	padding-top: 56px
 	@media (max-width: 1199.98px)
 		padding-top: 35px
 	> img 
@@ -1036,14 +1049,39 @@ hr
 			font-size: 26px
 			right: 22px
 
+.section-10
+	padding: 106px 0 121px
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+
+.nav-pills
+	flex-wrap: nowrap
+	white-space: nowrap
+	overflow: auto
+	font-size: 25px
+	@media (max-width: 1199.98px)
+		font-size: 20px
+	@media (max-width: 575.98px)
+		font-size: 18px
+	.nav-link
+		color: inherit
+		border-radius: 0
+		padding: 5.5px 23.5px
+		&.active
+			font-weight: bold
+			background-color: $color-primary
+		&:hover 
+			opacity: .8
+
 .page-footer
-	position: fixed
-	bottom: 0
-	left: 0
-	right: 0
 	color: $color-footer
-	padding: 90px 0 45px
+	padding: 90px 0 21px
 	background-color: #000
+	@media (min-width: 768px)
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
 	.row:not(.no-gutters)
 		margin-left: -15px
 		margin-right: -15px
@@ -1052,13 +1090,13 @@ hr
 			padding-right: 15px
 	ul 
 		li 
-			padding-bottom: 10px
+			padding-bottom: 18px
 			a 
 				color: inherit
 				&:hover 
 					color: $color-info
 	.footer-bottom
-		margin-top: 27px
+		margin-top: 21px
 		padding-top: 28px
 		border-top: 1px solid #3a3a3a
 		.row:not(.no-gutters)
