@@ -843,7 +843,7 @@ hr
 	flex-direction: column
 	background-color: $color-bg-3
 	height: 100%
-	transition: none
+	transition: 0s
 	font-size: 17px
 	color: inherit
 	position: relative
@@ -865,13 +865,20 @@ hr
 	.card-my-body
 		padding: 26px 31px 1px
 		flex-grow: 1
+		position: relative
+		transition: margin-top $transition, padding-top $transition
+		background-color: $color-bg-3
 		@media (max-width: 1199.98px)
 			padding-left: 20px
 			padding-right: 20px
+		.fz-30
+			transition: margin-bottom $transition
 		.descr
-			display: none
+			margin-bottom: 0
+			height: 0
+			overflow: hidden
 			color: #cfc0de
-			transition: $transition
+			transition: height $transition, margin-bottom $transition
 	&:hover 
 		color: #fff
 		.img-wrap
@@ -882,7 +889,6 @@ hr
 		.card-my-body
 			margin-top: -81px
 			background-color: $color-primary
-			position: relative
 			padding-top: 0
 			@media (max-width: 767.98px)
 				margin-top: -44px
@@ -891,8 +897,10 @@ hr
 			.fz-30
 				margin-bottom: 22px
 			.descr
-				display: block
+				height: 81px
 				margin-bottom: 20px
+				@media (max-width: 767.98px)
+					height: 44px
 
 .section-7
 	position: relative

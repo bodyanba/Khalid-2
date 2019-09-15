@@ -874,7 +874,7 @@ hr {
   flex-direction: column;
   background-color: #f9f9f9;
   height: 100%;
-  transition: none;
+  transition: 0s;
   font-size: 17px;
   color: inherit;
   position: relative;
@@ -895,15 +895,22 @@ hr {
       opacity: 0; }
   .card-my .card-my-body {
     padding: 26px 31px 1px;
-    flex-grow: 1; }
+    flex-grow: 1;
+    position: relative;
+    transition: margin-top 0.3s, padding-top 0.3s;
+    background-color: #f9f9f9; }
     @media (max-width: 1199.98px) {
       .card-my .card-my-body {
         padding-left: 20px;
         padding-right: 20px; } }
+    .card-my .card-my-body .fz-30 {
+      transition: margin-bottom 0.3s; }
     .card-my .card-my-body .descr {
-      display: none;
+      margin-bottom: 0;
+      height: 0;
+      overflow: hidden;
       color: #cfc0de;
-      transition: 0.3s; }
+      transition: height 0.3s, margin-bottom 0.3s; }
   .card-my:hover {
     color: #fff; }
     .card-my:hover .img-wrap img {
@@ -913,7 +920,6 @@ hr {
     .card-my:hover .card-my-body {
       margin-top: -81px;
       background-color: #602d91;
-      position: relative;
       padding-top: 0; }
       @media (max-width: 767.98px) {
         .card-my:hover .card-my-body {
@@ -923,8 +929,11 @@ hr {
       .card-my:hover .card-my-body .fz-30 {
         margin-bottom: 22px; }
       .card-my:hover .card-my-body .descr {
-        display: block;
+        height: 81px;
         margin-bottom: 20px; }
+        @media (max-width: 767.98px) {
+          .card-my:hover .card-my-body .descr {
+            height: 44px; } }
 
 .section-7 {
   position: relative;
