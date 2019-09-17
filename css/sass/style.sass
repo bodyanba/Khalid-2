@@ -257,6 +257,23 @@ hr
 	&:-moz-placeholder
 		color: rgba(51, 51, 51, .54)
 
+.link 
+	font-size: 17px
+	font-weight: bold
+	display: inline-block
+	text-transform: uppercase
+	margin-top: 77px
+	> * 
+		vertical-align: middle
+	.fas
+		font-size: 20px
+		margin-left: 18px
+		animation: rotate 5s infinite linear
+
+@keyframes rotate
+	100%
+		transform: rotate(360deg)
+
 .owl-carousel
 	.owl-stage-outer
 		cursor: ew-resize
@@ -590,6 +607,29 @@ hr
 		@media (min-width: 992px)
 			padding-left: 52px
 
+.breadcrumb
+	background-color: transparent
+	padding: 0
+	margin: 0
+	color: #fff
+	padding-top: 20px
+	padding-left: 20px
+	margin-bottom: -54px
+	@media (min-width: 992px)
+		padding-left: 52px
+	@media (max-width: 1199.98px)
+		margin-bottom: -46px
+	@media (max-width: 575.98px)
+		padding-top: 10px
+		margin-bottom: -43px
+	.breadcrumb-item + .breadcrumb-item:before
+		content: ">"
+		color: inherit
+	*
+		color: inherit !important
+	a:hover 
+		color: $color-warning !important
+
 .pace-done
 	.first, .second, .heading-1:before 
 		opacity: 1
@@ -650,6 +690,19 @@ hr
 		.img 	
 			max-width: initial
 			height: 658px
+	@media (min-width: 1200px)
+		.container 
+			position: relative
+			&:before 
+				content: ''
+				position: absolute
+				width: 175px
+				height: 151px
+				background-image: url(../img/scroll-1.svg)
+				background-size: cover
+				left: -280px
+				top: 40%
+				animation: anim-1 9s cubic-bezier(0.25, 0, 0.2, 1) infinite
 
 .section-3
 	.block
@@ -761,6 +814,19 @@ hr
 				display: flex
 				flex-direction: column
 				justify-content: center
+	@media (min-width: 1200px)
+		.container:first-child
+			position: relative
+			&:before 
+				content: ''
+				position: absolute
+				width: 87px
+				height: 77.5px
+				background-image: url(../img/scroll-2.svg)
+				background-size: cover
+				right: -250px
+				top: 20%
+				animation: anim-2 9.6s cubic-bezier(0.4, 0, 0.2, 1) infinite
 
 .section-5
 	position: relative
@@ -815,10 +881,32 @@ hr
 			margin-top: -27px
 			min-width: 143px
 			text-align: center
+	@media (min-width: 1200px)
+		&:before 
+			content: ''
+			position: absolute
+			width: 219px
+			height: 158px
+			background-image: url(../img/scroll-3.svg)
+			background-size: cover
+			left: 20px
+			top: 20%
+			animation: anim-3 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
+		&:after 
+			content: ''
+			position: absolute
+			width: 262.5px
+			height: 226.5px
+			background-image: url(../img/scroll-4.svg)
+			background-size: cover
+			right: -50px
+			top: 65%
+			animation: anim-4 40s infinite linear
 
 .section-6
 	padding: 110px 0 56px
 	position: relative
+	overflow: hidden
 	@media (max-width: 1199.98px)
 		padding: 70px 0 34px
 	> span 	
@@ -837,6 +925,56 @@ hr
 		z-index: 2
 		@media (max-width: 1199.98px)
 			margin-top: 54px
+	@media (min-width: 1200px)
+		&:before 
+			content: ''
+			position: absolute
+			width: 175px
+			height: 151px
+			background-image: url(../img/scroll-5.svg)
+			background-size: cover
+			left: 100px
+			top: -90px
+			transform: rotate(-7deg)
+			animation: anim-5 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
+		&:after 
+			content: ''
+			position: absolute
+			width: 174px
+			height: 155px
+			background-image: url(../img/scroll-6.svg)
+			background-size: cover
+			right: 40px
+			top: 70%
+			animation: anim-6 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
+
+@keyframes anim-1
+	50%
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+		transform: translate(44px, 17px)
+
+@keyframes anim-2
+	50%
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+		transform: translateY(25px) rotate(-53deg)
+
+@keyframes anim-3
+	65%
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+		transform: translateY(-48px) rotate(-75deg)
+
+@keyframes anim-4
+	100%
+		transform: rotate(360deg)
+
+@keyframes anim-5
+	40%
+		animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+		transform: translateY(40px) rotate(-1deg)
+
+@keyframes anim-6
+	40%
+		transform: translateY(100px)
 
 .card-my
 	display: flex 
@@ -848,26 +986,66 @@ hr
 	color: inherit
 	position: relative
 	overflow: hidden
+	.section-videos &
+		transition: color $transition, background-color $transition
 	.img-wrap
 		overflow: hidden
 		position: relative
 		img
 			transition: $transition
+		.section-videos &
+			&:before 
+				content: '\f04b'
+				font-family: "Font Awesome 5 Free"
+				font-size: 30px
+				font-weight: 900
+				line-height: 1
+				color: #fff
+				position: absolute
+				bottom: 5px
+				left: 2px
+				padding: 20px 18px 20px 25px
+				min-width: 78px
+				text-align: center
+				border: 4px solid 
+				border-color: transparent
+				border-radius: 100px
+				z-index: 9
+				transition: bottom $transition $transition, left $transition $transition, border-color $transition
 		&:after 	
 			content: ''
 			position: absolute
-			top: 0
 			right: 0
 			bottom: 0
 			left: 0
-			background-image: linear-gradient(to bottom, transparent, $color-primary 61%)
-			opacity: 0
+			.section-news &
+				top: 0
+				opacity: 0
+				background-image: linear-gradient(to bottom, transparent, $color-primary 61%)
+			.section-photos &
+				top: 50%
+				transition: $transition
+				background-image: linear-gradient(to bottom, transparent, #000)
+			.section-videos &
+				top: 20%
+				opacity: 0
+				background-image: linear-gradient(to bottom, transparent, $color-info 73%)
 	.card-my-body
 		padding: 26px 31px 1px
 		flex-grow: 1
 		position: relative
 		transition: margin-top $transition, padding-top $transition
-		background-color: $color-bg-3
+		.section-news &
+			background-color: $color-bg-3
+		.section-photos &
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			color: #fff
+			padding-bottom: 6px
+		.section-videos &
+			padding-bottom: 21px
 		@media (max-width: 1199.98px)
 			padding-left: 20px
 			padding-right: 20px
@@ -881,26 +1059,45 @@ hr
 			transition: height $transition, margin-bottom $transition
 	&:hover 
 		color: #fff
+		.section-videos &
+			background-color: $color-info
+			.text-gray 
+				color: #9af0e8 !important
 		.img-wrap
 			img 	
 				transform: scale(1.1, 1.1)
+				.section-videos &
+					opacity: .35
+			.section-videos &
+				&:before 
+					left: calc(50% - 78px/2)
+					bottom: calc(50% - 78px/2)
+					border-color: inherit
+					transition: bottom $transition, left $transition, border-color $transition $transition
 			&:after 
-				opacity: 1
+				.section-news &
+					opacity: 1
+				.section-photos &
+					top: 20%
+					background-image: linear-gradient(to bottom, transparent, $color-warning-2 73%)
+				.section-videos &
+					opacity: 1
 		.card-my-body
-			margin-top: -81px
-			background-color: $color-primary
-			padding-top: 0
-			@media (max-width: 767.98px)
-				margin-top: -44px
-			.text-gray
-				color: #b895da !important
-			.fz-30
-				margin-bottom: 22px
-			.descr
-				height: 81px
-				margin-bottom: 20px
+			.section-news &
+				margin-top: -81px
+				background-color: $color-primary
+				padding-top: 0
 				@media (max-width: 767.98px)
-					height: 44px
+					margin-top: -44px
+				.text-gray
+					color: #b895da !important
+				.fz-30
+					margin-bottom: 22px
+				.descr
+					height: 81px
+					margin-bottom: 20px
+					@media (max-width: 767.98px)
+						height: 44px
 
 .section-7
 	position: relative
@@ -1062,6 +1259,19 @@ hr
 	@media (max-width: 1199.98px)
 		padding: 70px 0
 
+.section-news
+	position: relative
+	> img 
+		position: absolute
+		right: 0
+		bottom: 0
+
+.section-photos
+	.link 
+		color: $color-warning-2
+		&:hover 
+			color: $color-danger
+
 .nav-pills
 	flex-wrap: nowrap
 	white-space: nowrap
@@ -1077,7 +1287,12 @@ hr
 		padding: 5.5px 23.5px
 		&.active
 			font-weight: bold
-			background-color: $color-primary
+			.section-news &
+				background-color: $color-primary
+			.section-photos &
+				background-color: $color-warning-2
+			.section-videos &
+				background-color: $color-info
 		&:hover 
 			opacity: .8
 
