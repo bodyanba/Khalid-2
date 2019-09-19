@@ -39,4 +39,10 @@ $(document).ready(function () {
     footer();
   });
 
+  $('[data-fancybox]').fancybox({});
+
+  $('[data-fancybox="gallery"]').fancybox({
+    transitionEffect: "circular",
+  });
+
 });
