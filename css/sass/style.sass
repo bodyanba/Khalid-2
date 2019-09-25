@@ -149,6 +149,13 @@ hr
 		padding-left: 9px
 		padding-right: 9px
 
+.fz-120
+	font-size: 120px
+	line-height: 1
+	@media (max-width: 1199.98px)
+		font-size: 70px
+	@media (max-width: 575.98px)
+		font-size: 52px
 .fz-90
 	font-size: 90px
 	line-height: 1
@@ -204,6 +211,13 @@ hr
 		font-size: 24px
 	@media (max-width: 575.98px)
 		font-size: 20px
+.fz-29
+	font-size: 29px
+	line-height: 1.33
+	@media (max-width: 1199.98px)
+		font-size: 23px
+	@media (max-width: 575.98px)
+		font-size: 19px
 .fz-25
 	font-size: 25px
 	line-height: 1.32
@@ -237,15 +251,26 @@ hr
 	font-size: 13px
 .fz-12
 	font-size: 12px
+.fz-0
+	font-size: 0
 
 .lh-15 
 	line-height: 1.5
+.lh-14
+	line-height: 1.4
 .lh-135
 	line-height: 1.35
+.lh-125
+	line-height: 1.25
 
 .mb-1em
 	p 
 		margin-bottom: 1em
+
+.p-relative
+	position: relative
+.p-static
+	position: static
 
 .o-hidden
 	overflow: hidden
@@ -292,17 +317,12 @@ hr
 .owl-carousel
 	.owl-stage-outer
 		cursor: ew-resize
-	.owl-item img
-		width: auto
 	.owl-dots
 		font-size: 0
-		position: absolute
-		margin: 0 -12.5px !important
 		.owl-dot
-			margin: 0 12.5px
+			vertical-align: middle
 			span 
 				background: transparent !important
-				width: 49px
 				margin: 0
 				height: 0
 				border-bottom: 3px solid $color-dot
@@ -313,6 +333,25 @@ hr
 			&.active
 				span 
 					border-bottom-color: $color-danger
+	.owl-nav 
+		margin: 0 -12px
+		[class*=owl-]
+			background: transparent !important
+			padding: 0
+			margin: 0
+			border-radius: 0
+			vertical-align: middle
+		.owl-prev, .owl-next 
+			width: 11px 
+			height: 19px
+			background-image: url(../img/arrow-left.svg) !important
+			background-size: cover
+			margin: 0 12px
+			transition: $transition
+			&:not(.disabled):hover 
+				opacity: .8
+		.owl-next
+			transform: rotate(180deg)
 
 .navbar
 	transition: $transition
@@ -873,6 +912,8 @@ hr
 		top: 175px
 		right: 15px
 	.owl-1
+		.owl-item img
+			width: auto
 		.owl-wrap	
 			align-items: flex-end
 		&:nth-child(even)
@@ -890,6 +931,12 @@ hr
 						margin-right: -118px
 		.owl-dots 
 			bottom: 0
+			position: absolute
+			margin: 0 -12.5px !important
+			.owl-dot
+				margin: 0 12.5px
+				span
+					width: 49px
 	.block
 		margin-bottom: 70px
 		@media (max-width: 1199.98px)
@@ -1294,19 +1341,21 @@ hr
 		padding: 70px 0
 
 .section-11
-	padding: 91px 0 144px
+	padding: 91px 0 133px
 	@media (max-width: 1199.98px)
-		padding: 70px 0
+		padding: 70px 0 54px
 	.block
 		font-size: 0
 		position: relative
-		direction: rtl
 		margin-top: -113px
+		@media (min-width: 992px)
+			direction: rtl
 		.img-wrap
 			position: relative
 			display: inline-block
-			img 
-				max-width: none
+			@media (min-width: 992px)
+				img 
+					max-width: none
 			.play 
 				width: 126px
 				height: 126px
@@ -1318,6 +1367,12 @@ hr
 				border: 5px solid #fff
 				border-radius: 100px
 				z-index: 9
+				@media (max-width: 991.98px)
+					width: 90px
+					height: 90px
+					transform: translate(25%, -75%)
+				@media (max-width: 575.98px)
+					transform: translate(-10%, -65%)
 				&:hover 
 					opacity: .8
 		.img-1
@@ -1325,19 +1380,137 @@ hr
 			top: 87px
 			left: 23px
 			transform: rotate(27deg)
-			width: 83px
+			width: 17.8%
 		.img-2
 			position: absolute
 			bottom: 33px
 			left: 23px
 			transform: rotate(-29deg)
-			width: 180px
+			width: 38.3%
 	.fz-33 
 		.font-weight-bold
 			border-bottom: 1px solid
 
-.section-11
-	
+.section-12
+	.block-1
+		display: inline-block
+		position: relative
+		margin-bottom: -33px
+		z-index: 2
+		padding: 47px 79px 38px 0
+		@media (max-width: 992.98px)
+			padding: 30px 50px 30px 0
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 100vw
+			background-color: $color-bg
+	.block-2
+		padding: 117px 0 96px
+		@media (max-width: 1199.98px)
+			padding: 103px 0 54px
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 100vw
+			background: $color-primary url(../img/bg-6.png) center center
+			background-size: cover
+			@media (min-width: 1600px)
+				right: -30px
+			@media (max-width: 767.98px)
+				right: 50%
+				transform: translateX(50%)
+		> * 
+			position: relative
+	hr 
+		border-top-color: #764e9d
+	.img 
+		max-width: none
+		margin-top: -212px
+		@media (min-width: 1600px)
+			position: relative
+			left: 160px
+		@media (max-width: 1199.98px)
+			width: 560px
+
+.section-13
+	padding: 120px 0 73px
+	@media (min-width: 576px)
+		background: url(../img/bg-7.png) no-repeat left bottom
+	@media (max-width: 1199.98px)
+		padding: 70px 0 50px
+		background-size: 63%
+	@media (max-width: 991.98px)
+		background-size: 57%
+	.img
+		position: absolute
+		width: 325px
+		left: calc(100% - 172px)
+		bottom: calc(100% - 150px)
+		@media (max-width: 767.98px)
+			display: none
+
+.section-14
+	padding-bottom: 77px
+	background-color: $color-bg-3
+	position: relative
+	@media (max-width: 1199.98px)
+		padding-bottom: 70px
+	.col-left
+		padding-top: 117px
+		z-index: 3
+		@media (max-width: 1199.98px)
+			padding-top: 70px
+		@media (min-width: 992px)
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				right: -9px
+				bottom: 0
+				width: 100vw
+				background-color: $color-bg-3
+	.col-right
+		position: static
+		&:before 	
+			content: ''
+			position: absolute
+			right: 0
+			height: 229px
+			width: 43%
+			background-image: linear-gradient(284deg, $color-danger, $color-warning)
+			animation: width2 linear infinite 20s
+	.owl-2
+		padding-top: 117px
+		@media (max-width: 1199.98px)
+			padding-top: 3rem
+		.owl-stage-outer
+			overflow: visible
+		.owl-item img
+			margin-bottom: 22px
+	.owl-navigation
+		padding-top: 30px
+		@media (max-width: 1199.98px)
+			padding-top: 1rem
+		.owl-dots
+			.owl-dot
+				margin: 0 6px
+				span
+					width: 7px
+					border-bottom-width: 7px
+				&.active
+					span 
+						width: 9px
+						border-bottom-width: 9px
+@keyframes width2
+	50%
+		width: 35%
 
 .section-news
 	position: relative

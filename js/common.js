@@ -8,6 +8,29 @@ $(document).ready(function () {
     margin: 20
   });
 
+  $(".owl-2").owlCarousel({
+    responsive: {
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 2,
+      },
+    },
+    items: 1,
+    smartSpeed: 1000,
+    loop: true,
+    autoplay: true,
+    margin: 18,
+    nav: true,
+    navText: ['', ''],
+    navContainer: '.owl-navigation .owl-nav',
+    dotsContainer: '.owl-navigation .owl-dots'
+  });
+
   $(".navbar-toggler").on("click", function() {
     $(this).toggleClass("active");
   });

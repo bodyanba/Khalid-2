@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.65 157.49">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #e93e1b;
+                mix-blend-mode: hard-light;
+                animation-name: opacity;
+                animation-iteration-count: infinite;
+                opacity: 0;
+            }
+            @keyframes opacity {
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            .cls-1:nth-child(1) {
+                        animation-duration: 3s;
+            }
+            .cls-1:nth-child(2) {
+                        animation-duration: 6s;
+                        animation-delay: .9s;
+            }
+            .cls-1:nth-child(3) {
+                        animation-duration: 5s;
+            }
+            .cls-1:nth-child(4) {
+                        animation-duration: 4s;
+                        animation-delay: 2s;
+            }
+            .cls-1:nth-child(5) {
+                        animation-duration: 7.51s;
+                        animation-delay: .3s;
+            }
+            .cls-1:nth-child(6) {
+                        animation-duration: 5.58s;
+            }
+            .cls-1:nth-child(7) {
+                        animation-duration: 3.52s;
+            }
+            .cls-1:nth-child(8) {
+                        animation-duration: 3.35s;
+            }
+            .cls-1:nth-child(9) {
+                        animation-duration: 5.49s;
+            }
+            .cls-1:nth-child(10) {
+                        animation-duration: 4.52s;
+            }
+            .cls-1:nth-child(11) {
+                        animation-duration: 5.64s;
+            }
+            .cls-1:nth-child(12) {
+                        animation-duration: 5.79s;
+                        animation-delay: 1s;
+            }
+            .cls-1:nth-child(13) {
+                        animation-duration: 4.97s;
+                        animation-delay: .2s;
+            }
+            .cls-1:nth-child(14) {
+                        animation-duration: 4.14s;
+            }
+            .cls-1:nth-child(15) {
+                        animation-duration: 7.52s;
+            }
+            .cls-1:nth-child(16) {
+                        animation-duration: 3.39s;
+            }
+            .cls-1:nth-child(17) {
+                        animation-duration: 3.24s;
+                        animation-delay: 1s;
+            }
+            .cls-1:nth-child(18) {
+                        animation-duration: 5.67s;
+            }
+            .cls-1:nth-child(19) {
+                        animation-duration: 7.73s;
+            }
+            .cls-1:nth-child(20) {
+                        animation-duration: 4.34s;
+                        animation-delay: 2.4s;
+            }
+            .cls-1:nth-child(21) {
+                        animation-duration: 3.65s;
+            }
+            .cls-1:nth-child(22) {
+                        animation-duration: 4.17s;
+            }
+            .cls-1:nth-child(23) {
+                        animation-duration: 5.91s;
+            }
+            .cls-1:nth-child(24) {
+                        animation-duration: 3.23s;
+                        animation-delay: 1.2s;
+            }
+            .cls-1:nth-child(25) {
+                        animation-duration: 3.64s;
+            }
+            .cls-1:nth-child(26) {
+                        animation-duration: 4.65s;
+            }
+            .cls-1:nth-child(27) {
+                        animation-duration: 4.02s;
+                        animation-delay: 1.6s;
+            }
+            .cls-1:nth-child(28) {
+                        animation-duration: 3.08s;
+            }
+            .cls-1:nth-child(29) {
+                        animation-duration: 7.04s;
+            }
+            .cls-1:nth-child(30) {
+                        animation-duration: 5.11s;
+            }
+            .cls-1:nth-child(31) {
+                        animation-duration: 3.99s;
+            }
+            .cls-1:nth-child(32) {
+                        animation-duration: 3.15s;
+                        animation-delay: 1.1s;
+            }
+        </style>
+    </defs>
+    <title>Ресурс 1</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Слой_1-2" data-name="Слой 1">
+            <g id="Layer_1" data-name="Layer 1">
+                <polygon class="cls-1" points="4.06 4.06 0 4.06 1.99 0 4.06 4.06" />
+                <polygon class="cls-1" points="25.98 4.06 21.92 4.06 23.91 0 25.98 4.06" />
+                <polygon class="cls-1" points="4.06 25.98 0 25.98 1.99 21.92 4.06 25.98" />
+                <polygon class="cls-1" points="25.98 25.98 21.92 25.98 23.91 21.92 25.98 25.98" />
+                <polygon class="cls-1" points="47.9 4.06 43.84 4.06 45.83 0 47.9 4.06" />
+                <polygon class="cls-1" points="69.81 4.06 65.75 4.06 67.75 0 69.81 4.06" />
+                <polygon class="cls-1" points="47.9 25.98 43.84 25.98 45.83 21.92 47.9 25.98" />
+                <polygon class="cls-1" points="69.81 25.98 65.75 25.98 67.75 21.92 69.81 25.98" />
+                <polygon class="cls-1" points="91.73 4.06 87.67 4.06 89.67 0 91.73 4.06" />
+                <polygon class="cls-1" points="113.65 4.06 109.59 4.06 111.58 0 113.65 4.06" />
+                <polygon class="cls-1" points="91.73 25.98 87.67 25.98 89.67 21.92 91.73 25.98" />
+                <polygon class="cls-1" points="113.65 25.98 109.59 25.98 111.58 21.92 113.65 25.98" />
+                <polygon class="cls-1" points="4.06 47.9 0 47.9 1.99 43.84 4.06 47.9" />
+                <polygon class="cls-1" points="25.98 47.9 21.92 47.9 23.91 43.84 25.98 47.9" />
+                <polygon class="cls-1" points="4.06 69.81 0 69.81 1.99 65.75 4.06 69.81" />
+                <polygon class="cls-1" points="25.98 69.81 21.92 69.81 23.91 65.75 25.98 69.81" />
+                <polygon class="cls-1" points="47.9 47.9 43.84 47.9 45.83 43.84 47.9 47.9" />
+                <polygon class="cls-1" points="69.81 47.9 65.75 47.9 67.75 43.84 69.81 47.9" />
+                <polygon class="cls-1" points="47.9 69.81 43.84 69.81 45.83 65.75 47.9 69.81" />
+                <polygon class="cls-1" points="69.81 69.81 65.75 69.81 67.75 65.75 69.81 69.81" />
+                <polygon class="cls-1" points="91.73 47.9 87.67 47.9 89.67 43.84 91.73 47.9" />
+                <polygon class="cls-1" points="113.65 47.9 109.59 47.9 111.58 43.84 113.65 47.9" />
+                <polygon class="cls-1" points="91.73 69.81 87.67 69.81 89.67 65.75 91.73 69.81" />
+                <polygon class="cls-1" points="113.65 69.81 109.59 69.81 111.58 65.75 113.65 69.81" />
+                <polygon class="cls-1" points="91.73 91.73 87.67 91.73 89.67 87.67 91.73 91.73" />
+                <polygon class="cls-1" points="113.65 91.73 109.59 91.73 111.58 87.67 113.65 91.73" />
+                <polygon class="cls-1" points="91.73 113.65 87.67 113.65 89.67 109.59 91.73 113.65" />
+                <polygon class="cls-1" points="113.65 113.65 109.59 113.65 111.58 109.59 113.65 113.65" />
+                <polygon class="cls-1" points="91.73 135.57 87.67 135.57 89.67 131.51 91.73 135.57" />
+                <polygon class="cls-1" points="113.65 135.57 109.59 135.57 111.58 131.51 113.65 135.57" />
+                <polygon class="cls-1" points="91.73 157.49 87.67 157.49 89.67 153.43 91.73 157.49" />
+                <polygon class="cls-1" points="113.65 157.49 109.59 157.49 111.58 153.43 113.65 157.49" />
+            </g>
+        </g>
+    </g>
+</svg>
