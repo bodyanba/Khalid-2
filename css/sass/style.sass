@@ -191,6 +191,12 @@ hr
 		font-size: 30px
 	@media (max-width: 575.98px)
 		font-size: 25px
+.fz-33
+	font-size: 33px
+	@media (max-width: 1199.98px)
+		font-size: 25px
+	@media (max-width: 575.98px)
+		font-size: 21px
 .fz-30
 	font-size: 30px
 	line-height: 1.33
@@ -243,6 +249,15 @@ hr
 
 .o-hidden
 	overflow: hidden
+
+.dropdown-menu
+	border-radius: 0
+	border: 0
+.dropdown-item
+	color: $color-body
+	font-weight: inherit
+	&.active, &:active
+		background-color: $color-danger
 
 .form-control
 	font-weight: 300
@@ -317,6 +332,9 @@ hr
 				right: 0
 				bottom: 0
 				left: 0
+	.navbar-collapse
+		@media (max-width: 991.98px)
+			padding: .5rem 0
 	.nav-link
 		color: inherit
 		span
@@ -335,10 +353,25 @@ hr
 					opacity: 1
 		.nav-link
 			color: $color-body
-	.nav-item.active .nav-link
-		font-weight: bold
-		@media (max-width: 1199.98px)
-			color: $color-danger
+	.nav-item
+		&.active .nav-link
+			font-weight: bold
+			@media (max-width: 1199.98px)
+				color: $color-danger
+		&.dropdown
+			.dropdown-menu
+				display: block
+				margin-top: 0
+				transition: $transition
+				@media (min-width: 992px)
+					opacity: 0
+					transform: translateY(10px)
+					pointer-events: none
+			&:hover 
+				.dropdown-menu
+					opacity: 1
+					transform: none
+					pointer-events: auto
 	@media (min-width: 1200px)
 		padding-top: 29px
 		padding-bottom: 0
@@ -814,19 +847,20 @@ hr
 				display: flex
 				flex-direction: column
 				justify-content: center
-	@media (min-width: 1200px)
-		.container:first-child
-			position: relative
-			&:before 
-				content: ''
-				position: absolute
-				width: 87px
-				height: 77.5px
-				background-image: url(../img/scroll-2.svg)
-				background-size: cover
-				right: -250px
-				top: 20%
-				animation: anim-2 9.6s cubic-bezier(0.4, 0, 0.2, 1) infinite
+	&:not(.not)
+		@media (min-width: 1200px)
+			.container:first-child
+				position: relative
+				&:before 
+					content: ''
+					position: absolute
+					width: 87px
+					height: 77.5px
+					background-image: url(../img/scroll-2.svg)
+					background-size: cover
+					right: -250px
+					top: 20%
+					animation: anim-2 9.6s cubic-bezier(0.4, 0, 0.2, 1) infinite
 
 .section-5
 	position: relative
@@ -1258,6 +1292,52 @@ hr
 	padding: 106px 0 121px
 	@media (max-width: 1199.98px)
 		padding: 70px 0
+
+.section-11
+	padding: 91px 0 144px
+	@media (max-width: 1199.98px)
+		padding: 70px 0
+	.block
+		font-size: 0
+		position: relative
+		direction: rtl
+		margin-top: -113px
+		.img-wrap
+			position: relative
+			display: inline-block
+			img 
+				max-width: none
+			.play 
+				width: 126px
+				height: 126px
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(49%, -75%)
+				background: url(../img/play.svg) no-repeat 55% center
+				border: 5px solid #fff
+				border-radius: 100px
+				z-index: 9
+				&:hover 
+					opacity: .8
+		.img-1
+			position: absolute
+			top: 87px
+			left: 23px
+			transform: rotate(27deg)
+			width: 83px
+		.img-2
+			position: absolute
+			bottom: 33px
+			left: 23px
+			transform: rotate(-29deg)
+			width: 180px
+	.fz-33 
+		.font-weight-bold
+			border-bottom: 1px solid
+
+.section-11
+	
 
 .section-news
 	position: relative
