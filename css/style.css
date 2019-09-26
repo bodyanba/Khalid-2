@@ -17,6 +17,9 @@
 .text-primary {
   color: #602d91 !important; }
 
+.text-warning {
+  color: #ffc60b !important; }
+
 .text-warning-2 {
   color: #f5881a !important; }
 
@@ -102,6 +105,10 @@ main {
   font-weight: normal; }
 @font-face {
   font-family: "Proxima Nova";
+  src: url("../fonts/Proxima-Nova-Semibold.otf");
+  font-weight: 600; }
+@font-face {
+  font-family: "Proxima Nova";
   src: url("../fonts/Proxima-Nova-Bold.otf");
   font-weight: bold; }
 @font-face {
@@ -112,6 +119,10 @@ main {
   font-family: "Proxima Nova";
   src: url("../fonts/Proxima-Nova-Black.otf");
   font-weight: 900; }
+@font-face {
+  font-family: "Baseet";
+  src: url("../fonts/29LTBaseet-Bold.OTF");
+  font-weight: 700; }
 * {
   outline: none !important; }
 
@@ -254,6 +265,16 @@ hr {
     .fz-60 {
       font-size: 35px; } }
 
+.fz-50 {
+  font-size: 50px;
+  line-height: 1.16; }
+  @media (max-width: 1199.98px) {
+    .fz-50 {
+      font-size: 40px; } }
+  @media (max-width: 575.98px) {
+    .fz-50 {
+      font-size: 30px; } }
+
 .fz-45 {
   font-size: 45px;
   line-height: 1.11; }
@@ -353,11 +374,20 @@ hr {
 .fz-0 {
   font-size: 0; }
 
+.baseet {
+  font-family: "Baseet"; }
+
+.font-weight-semibold {
+  font-weight: 600; }
+
 .lh-165 {
   line-height: 1.65; }
 
 .lh-15 {
   line-height: 1.5; }
+
+.lh-145 {
+  line-height: 1.45; }
 
 .lh-14 {
   line-height: 1.4; }
@@ -367,6 +397,9 @@ hr {
 
 .lh-125 {
   line-height: 1.25; }
+
+.lh-05 {
+  line-height: 0.5; }
 
 .mb-1em p {
   margin-bottom: 1em; }
@@ -1819,6 +1852,106 @@ hr {
     .section-16 .block:nth-child(4) .block-1 .letter:before {
       content: "D"; }
 
+.section-17 {
+  padding: 91px 0 108px; }
+  @media (max-width: 1199.98px) {
+    .section-17 {
+      padding: 70px 0; } }
+  .section-17 .card-my {
+    margin-bottom: 18px;
+    height: auto; }
+  .section-17 .p-relative {
+    z-index: 1; }
+
+.section-18 {
+  padding: 80px 0;
+  position: relative; }
+  @media (max-width: 1199.98px) {
+    .section-18 {
+      padding: 70px 0; } }
+  .section-18 > img {
+    position: absolute;
+    top: 180px;
+    right: -178px;
+    width: 798px;
+    z-index: -1; }
+    @media (max-width: 991.98px) {
+      .section-18 > img {
+        display: none; } }
+  @media (min-width: 768px) {
+    .section-18 .img {
+      max-width: initial; } }
+  .section-18 .img-1 {
+    position: absolute;
+    top: 85px;
+    left: 26%;
+    max-width: 53%; }
+
+.section-19 {
+  padding: 72px 0;
+  position: relative; }
+  @media (max-width: 1199.98px) {
+    .section-19 {
+      padding: 70px 0; } }
+
+.section-20 {
+  padding: 30px 0 43px;
+  position: relative; }
+  @media (max-width: 575.98px) {
+    .section-20 {
+      padding-bottom: 0; } }
+  .section-20 .block {
+    display: inline-block;
+    position: relative;
+    padding: 14px 95px 13px 0;
+    margin-bottom: 51px; }
+    .section-20 .block:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw; }
+    .section-20 .block.block-1:before {
+      background-color: #ffc60b; }
+    .section-20 .block.block-2:before {
+      background-color: #602d91; }
+  @media (max-width: 575.98px) {
+    .section-20 .lh-05 {
+      line-height: 1;
+      margin-bottom: 0.5rem !important; } }
+  @media (min-width: 992px) {
+    .section-20 .line-wrap {
+      position: relative;
+      background: url(../img/svg/line.svg) no-repeat center center; }
+      .section-20 .line-wrap [class*="col"] + [class*="col"]:before {
+        content: "";
+        width: 99px;
+        height: 8px;
+        position: absolute;
+        bottom: 105px;
+        left: 0;
+        transform: translate(-50%, -50%);
+        background: url(../img/svg/line.png);
+        background-size: cover; } }
+
+.round {
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #602d91;
+  margin-bottom: 27px; }
+  .round span {
+    display: block;
+    padding: 8px 29px;
+    background-color: #ffc60b;
+    margin-right: -20px;
+    animation: round 5s infinite linear; }
+
+@keyframes round {
+  50% {
+    margin-right: 0; } }
 .box {
   display: flex;
   flex-direction: column;

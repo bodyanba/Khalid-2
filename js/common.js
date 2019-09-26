@@ -64,7 +64,7 @@ $(document).ready(function () {
 
   $('[data-fancybox]').fancybox({});
 
-  $('[data-fancybox*="gallery-"]').fancybox({
+  $('[data-fancybox*="gallery"]').fancybox({
     transitionEffect: "circular",
   });
 
