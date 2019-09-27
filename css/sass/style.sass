@@ -291,6 +291,9 @@ hr
 .p-static
 	position: static
 
+.z-2 
+	z-index: 2
+
 .o-hidden
 	overflow: hidden
 
@@ -1878,7 +1881,7 @@ hr
 .section-21
 	padding: 104px 0 82px
 	@media (max-width: 1199.98px)
-		padding: 70px 0
+		padding: 70px 0 
 	.logos
 		padding-top: 51px
 		@media (max-width: 1199.98px)	
@@ -1888,6 +1891,37 @@ hr
 			margin-bottom: 18px
 			&:hover
 				opacity: .8
+
+.section-22
+	padding: 110px 0 91px
+	@media (min-width: 992px)
+		background: url(../img/image-3.png) no-repeat right bottom 
+	@media (max-width: 1199.98px)
+		padding: 70px 0 54px
+	.ellipse-wrap
+		position: absolute
+		@media (max-width: 991.98px)
+			display: none
+		.ellipse
+			display: block
+			border-radius: 100px
+			background-image: linear-gradient(330deg, #ee5826, $color-warning)
+			animation: rot 5s infinite linear
+		&.ellipse-wrap-1
+			left: 14%
+			top: -10%
+			.ellipse
+				width: 84px
+				height: 84px
+		&.ellipse-wrap-2
+			bottom: 23%
+			left: 2.5%
+			.ellipse
+				width: 32px
+				height: 32px
+@keyframes rot
+	100%
+		transform: rotate(360deg)
 
 .round
 	color: #fff
@@ -1992,6 +2026,26 @@ hr
 		&:hover 
 			opacity: .8
 
+.section-wrap
+	background-image: linear-gradient(to bottom, $color-primary, #ee5826)
+	@media (min-width: 1200px)
+		.row
+			min-height: 541px
+.section-23
+	padding: 110px 0 89px
+	@media (min-width: 992px)
+		background: url(../img/image-4.png) no-repeat left top 
+	@media (max-width: 1199.98px)
+		padding: 70px 0 35px
+		background-size: 83%
+.section-24
+	padding: 110px 0 128px
+	@media (min-width: 992px)
+		background: url(../img/image-5.png) no-repeat right bottom 
+	@media (max-width: 1199.98px)
+		padding: 35px 0 70px
+		background-size: 55%
+		
 .page-footer
 	color: $color-footer
 	padding: 90px 0 21px
