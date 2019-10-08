@@ -978,8 +978,9 @@ hr {
   .section-4 .brands [class*="col"] {
     padding-top: 14px;
     padding-bottom: 14px; }
-    .section-4 .brands [class*="col"] + [class*="col"] {
-      border-left: 1px solid #dfdfdf; }
+    @media (min-width: 768px) {
+      .section-4 .brands [class*="col"] + [class*="col"] {
+        border-left: 1px solid #dfdfdf; } }
     .section-4 .brands [class*="col"] > div {
       height: 100%;
       display: flex;
@@ -1601,6 +1602,9 @@ hr {
       left: 23px;
       transform: rotate(-29deg);
       width: 38.3%; }
+      @media (max-width: 991.98px) {
+        .section-11 .block .img-2 {
+          width: 25%; } }
   .section-11 .fz-33 .font-weight-bold {
     border-bottom: 1px solid; }
 
@@ -1620,7 +1624,8 @@ hr {
     right: 0;
     bottom: 0;
     width: 100vw;
-    background-color: #f7f7f7; }
+    background-color: #f7f7f7;
+    z-index: -1; }
 .section-12 .block-2 {
   padding: 117px 0 96px; }
   @media (max-width: 1199.98px) {
@@ -1889,6 +1894,10 @@ hr {
     top: 85px;
     left: 26%;
     max-width: 53%; }
+    @media (max-width: 767.98px) {
+      .section-18 .img-1 {
+        left: 10%;
+        max-width: 30%; } }
 
 .section-19 {
   padding: 72px 0;
@@ -1921,7 +1930,8 @@ hr {
       top: 0;
       right: 0;
       bottom: 0;
-      width: 100vw; }
+      width: 100vw;
+      z-index: -1; }
     .section-20 .block.block-1:before {
       background-color: #ffc60b; }
     .section-20 .block.block-2:before {
@@ -2074,16 +2084,16 @@ hr {
     color: #e93e1b; }
 
 .nav-pills {
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  overflow: auto;
-  font-size: 25px; }
+  font-size: 25px;
+  text-align: center; }
   @media (max-width: 1199.98px) {
     .nav-pills {
-      font-size: 20px; } }
+      font-size: 19px; } }
   @media (max-width: 575.98px) {
     .nav-pills {
-      font-size: 18px; } }
+      font-size: 18px; }
+      .nav-pills .nav-item {
+        flex-grow: 1; } }
   .nav-pills .nav-link {
     color: inherit;
     border-radius: 0;
