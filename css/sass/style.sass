@@ -15,12 +15,12 @@ body
 		bottom: 0
 		left: 0
 		transition: $transition
-		background-color: $color-warning
+		background-color: $color-info
 		background-image: url(../img/logo-3.svg), url(../img/pace.svg)
 		background-repeat: no-repeat
 		background-position: center center, center bottom
 		background-size: 400px, auto
-		z-index: 9999
+		z-index: 99999
 		@media (max-width: 991.98px)
 			background-size: 200px, auto
 
@@ -331,6 +331,8 @@ hr
 		font-size: 20px
 		margin-left: 18px
 		animation: rotate 5s infinite linear
+	&:hover 
+		color: $color-danger !important
 
 @keyframes rotate
 	100%
@@ -784,7 +786,6 @@ hr
 	@media (min-width: 992px)
 		.img 	
 			max-width: initial
-			height: 658px
 
 .section-3
 	.block
@@ -1063,6 +1064,10 @@ hr
 				top: 20%
 				opacity: 0
 				background-image: linear-gradient(to bottom, transparent, $color-info 73%)
+			.section-publications &
+				top: 0
+				opacity: 0
+				background-image: linear-gradient(to bottom, transparent, $color-warning 61%)
 	.card-my-body
 		padding: 26px 31px 1px
 		flex-grow: 1
@@ -1131,6 +1136,10 @@ hr
 					margin-bottom: 20px
 					@media (max-width: 767.98px)
 						height: 44px
+			.section-publications & 
+				background-color: $color-warning
+				.text-gray 
+					color: #fff !important
 
 .section-7
 	position: relative
@@ -1375,6 +1384,34 @@ hr
 	@media (max-width: 1199.98px)
 		padding: 70px 0
 
+.block
+	.img-wrap
+		position: relative
+		display: inline-block
+		img 
+			transform: rotateY(180deg)
+			@media (min-width: 992px)
+				max-width: none
+		.play 
+			width: 126px
+			height: 126px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(49%, -75%)
+			background: url(../img/play.svg) no-repeat 55% center
+			border: 5px solid #fff
+			border-radius: 100px
+			z-index: 9
+			@media (max-width: 991.98px)
+				width: 90px
+				height: 90px
+				transform: translate(25%, -75%)
+			@media (max-width: 575.98px)
+				transform: translate(-10%, -65%)
+			&:hover 
+				opacity: .8
+
 .section-11
 	padding: 91px 0 133px
 	@media (max-width: 1199.98px)
@@ -1385,32 +1422,6 @@ hr
 		margin-top: -113px
 		@media (min-width: 992px)
 			direction: rtl
-		.img-wrap
-			position: relative
-			display: inline-block
-			img 
-				transform: rotateY(180deg)
-				@media (min-width: 992px)
-					max-width: none
-			.play 
-				width: 126px
-				height: 126px
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(49%, -75%)
-				background: url(../img/play.svg) no-repeat 55% center
-				border: 5px solid #fff
-				border-radius: 100px
-				z-index: 9
-				@media (max-width: 991.98px)
-					width: 90px
-					height: 90px
-					transform: translate(25%, -75%)
-				@media (max-width: 575.98px)
-					transform: translate(-10%, -65%)
-				&:hover 
-					opacity: .8
 		.img-1
 			position: absolute
 			top: 87px
@@ -1549,6 +1560,7 @@ hr
 	counter-reset: number
 	position: relative
 	@media (min-width: 768px)
+		padding-bottom: 100px
 		&:before, &:after 
 			content: ''
 			position: absolute
@@ -1646,15 +1658,16 @@ hr
 				.letter
 					&:before 
 						content: 'B'
+			.play 
+				left: 0
+				@media (max-width: 767.98px)
+					left: 30%
 		&:nth-child(3)
 			.block-1 
 				.letter
 					&:before 
 						content: 'C'
 		&:nth-child(4)
-			padding-bottom: 0
-			&:after 
-				display: none
 			.img-wrap
 				@media (min-width: 768px)
 					.img 
@@ -1664,11 +1677,16 @@ hr
 					bottom: 13px
 					margin-right: 60px
 			.block-1 
-				&:after 
-					display: none
 				.letter
 					&:before 
 						content: 'D'
+		&:last-child
+			padding-bottom: 0
+			&:after 
+				display: none
+			.block-1 
+				&:after 
+					display: none
 
 .section-17
 	padding: 91px 0 108px
@@ -1800,7 +1818,7 @@ hr
 			animation: rot 5s infinite linear
 		&.ellipse-wrap-1
 			left: 14%
-			top: -10%
+			bottom: 55%
 			.ellipse
 				width: 84px
 				height: 84px
@@ -1886,12 +1904,16 @@ hr
 		position: absolute
 		right: 0
 		bottom: 0
+	.link 
+		color: $color-primary
 
 .section-photos
 	.link 
 		color: $color-warning-2
-		&:hover 
-			color: $color-danger
+
+.section-publications
+	.link 
+		color: $color-warning
 
 .nav-pills
 	font-size: 25px
@@ -1900,8 +1922,9 @@ hr
 		font-size: 19px
 	@media (max-width: 575.98px)
 		font-size: 18px
-		.nav-item
-			flex-grow: 1
+		flex-wrap: nowrap
+		white-space: nowrap
+		overflow: auto
 	.nav-link
 		color: inherit
 		border-radius: 0
@@ -1914,6 +1937,8 @@ hr
 				background-color: $color-warning-2
 			.section-videos &
 				background-color: $color-info
+			.section-publications &
+				background-color: $color-warning
 		&:hover 
 			opacity: .8
 
