@@ -721,11 +721,18 @@ hr
 	display: flex
 	flex-direction: column
 	height: 100vh
+	@media (max-width: 991.98px)
+		height: auto
+		min-height: 100vh
 	> .container
 		padding-top: 209px
 		padding-bottom: 115px
 		margin-top: auto
 		margin-bottom: auto
+		@media (max-width: 1199.98px)
+			padding-top: 192px
+		@media (max-width: 991.98px)
+			padding-top: 183px
 	.heading-1
 		text-shadow: 0 0 29px rgba(0, 0, 0, 0.55)
 		padding-left: 35px
@@ -774,8 +781,11 @@ hr
 	height: 500px
 	> .container
 		margin-bottom: 0
+	@media (max-width: 991.98px)
+		height: auto
+		min-height: 500px
 	@media (max-width: 575.98px)
-		height: 400px
+		min-height: 400px
 		> .container
 			padding-bottom: 80px
 	.heading-1
@@ -786,6 +796,9 @@ hr
 
 .header-2
 	height: 100vh
+	@media (max-width: 991.98px)
+		height: auto
+		min-height: 100vh
 
 .breadcrumb
 	background-color: transparent
