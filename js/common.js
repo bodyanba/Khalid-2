@@ -1,6 +1,12 @@
 $(document).ready(function () {
 
+  var dir = false;
+  if ( $("html").attr("dir") == "rtl" ) {
+    dir = true;
+  };
+
   $(".owl-1").owlCarousel({
+    rtl: dir,
     items: 1,
     smartSpeed: 1000,
     loop: true,
@@ -9,6 +15,7 @@ $(document).ready(function () {
   });
 
   $(".owl-2").owlCarousel({
+    rtl: dir,
     responsive: {
       576: {
         items: 2,
@@ -67,5 +74,26 @@ $(document).ready(function () {
   $('[data-fancybox*="gallery"]').fancybox({
     transitionEffect: "circular",
   });
+
+  var audio = document.getElementById("audio");
+  var button = document.getElementById("play-pause");
+  function audioPlay() {
+    if (audio.paused) {
+      audio.play();
+      $(button).removeClass("active");
+    } else {
+      audio.pause();
+      $(button).addClass("active");
+    };
+  };
+
+  if (button) {
+    Pace.on('done', function() {
+      audioPlay();
+    });
+    $(button).on("click", function() {
+      audioPlay();
+    });
+  };
 
 });

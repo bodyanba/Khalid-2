@@ -97,6 +97,8 @@ hr
 		transition: $transition
 		transform: translate(7px, 7px)
 		z-index: -1
+		[dir="rtl"] &
+			transform: translate(-7px, 7px)
 	&:after 
 		content: ''
 		display: inline-block
@@ -107,14 +109,22 @@ hr
 		margin-left: 22px
 		vertical-align: middle
 		transition: $transition
+		[dir="rtl"] &
+			margin-left: 0
+			margin-right: 22px
+			transform: rotateY(180deg)
 	&:hover 
 		&:before 	
 			transform: none
 		&:after 
 			transform: translateX(-5px)
+			[dir="rtl"] &
+				transform: rotateY(180deg) translateX(-5px)
 	&:active
 		&:after 
 			transform: translateX(5px)
+			[dir="rtl"] &
+				transform: rotateY(180deg) translateX(5px)
 .btn-danger
 	background: linear-gradient(to right, $color-danger, $color-warning)
 	&:before 
@@ -166,24 +176,41 @@ hr
 .fz-80
 	font-size: 80px
 	line-height: 1
+	[dir="rtl"] &
+		font-size: 65px
+		line-height: 1.8
 	@media (max-width: 1199.98px)
 		font-size: 60px
+		[dir="rtl"] &
+			font-size: 50px
+			line-height: 1.3
 	@media (max-width: 575.98px)
 		font-size: 40px
+		[dir="rtl"] &
+			font-size: 30px
+			line-height: 1.13
 .fz-70
 	font-size: 70px
 	line-height: 1
+	[dir="rtl"] &
+		font-size: 60px
+		line-height: 1.5
 	@media (max-width: 1199.98px)
-		font-size: 52px
+		font-size: 52px !important
+		line-height: 1
 	@media (max-width: 575.98px)
-		font-size: 38px
+		font-size: 38px !important
 .fz-60
 	font-size: 60px
 	line-height: 1
+	[dir="rtl"] &
+		font-size: 50px
+		line-height: 1.3
 	@media (max-width: 1199.98px)
-		font-size: 46px
+		font-size: 46px !important
+		line-height: 1
 	@media (max-width: 575.98px)
-		font-size: 35px
+		font-size: 35px !important
 .fz-50
 	font-size: 50px
 	line-height: 1.16
@@ -201,8 +228,12 @@ hr
 .fz-40
 	font-size: 40px
 	line-height: 1.13
+	[dir="rtl"] &
+		font-size: 30px
 	@media (max-width: 1199.98px)
 		font-size: 30px
+		[dir="rtl"] &
+			font-size: 25px
 	@media (max-width: 575.98px)
 		font-size: 25px
 .fz-33
@@ -214,10 +245,12 @@ hr
 .fz-30
 	font-size: 30px
 	line-height: 1.33
+	[dir="rtl"] &
+		font-size: 25px
 	@media (max-width: 1199.98px)
-		font-size: 24px
+		font-size: 24px !important
 	@media (max-width: 575.98px)
-		font-size: 20px
+		font-size: 20px !important
 .fz-29
 	font-size: 29px
 	line-height: 1.33
@@ -331,6 +364,9 @@ hr
 		font-size: 20px
 		margin-left: 18px
 		animation: rotate 5s infinite linear
+		[dir="rtl"] &
+			margin-left: 0
+			margin-right: 20px
 	&:hover 
 		color: $color-danger !important
 
@@ -375,11 +411,18 @@ hr
 			transition: $transition
 			&:not(.disabled):hover 
 				opacity: .8
+		.owl-prev
+			[dir="rtl"] &
+				transform: rotate(180deg)
 		.owl-next
 			transform: rotate(180deg)
+			[dir="rtl"] &
+				transform: none
 
 .navbar
 	transition: $transition
+	[dir="rtl"] & 
+		font-size: 14px
 	.navbar-brand
 		max-width: 70%
 		position: relative
@@ -419,6 +462,7 @@ hr
 		.nav-link
 			color: $color-body
 	.nav-item
+		transition: margin-left $transition, margin-right $transition
 		&.active .nav-link
 			font-weight: bold
 			@media (max-width: 1199.98px)
@@ -444,21 +488,27 @@ hr
 			position: relative
 			font-size: 17px
 			padding-top: 10px
+			[dir="rtl"] & 
+				font-size: 13.5px
 			&:after 	
 				content: ''
 				position: absolute
 				top: 100%
 				left: 0
-				width: 1040px
+				width: 1055px
 				height: 8px
 				background-image: linear-gradient(to right, $color-danger, $color-warning 30%, $color-info 67%, $color-primary)
+				[dir="rtl"] &
+					left: auto
+					right: 0
+					transform: rotateY(180deg)
 			.nav-link
 				padding: 1rem 0
 				position: relative
 				&:after 	
 					content: ''
 					position: absolute
-					bottom: 0
+					bottom: -1px
 					left: 50%
 					transform: translateX(-50%)
 					border-width: 6px 5px
@@ -467,6 +517,9 @@ hr
 			.nav-item
 				+ .nav-item
 					margin-left: 43.5px
+					[dir="rtl"] & 
+						margin-left: 0
+						margin-right: 43.5px
 				&:nth-child(1)
 					.nav-link
 						&:hover 	
@@ -515,6 +568,10 @@ hr
 						.nav-link
 							&:after
 								border-bottom-color: #91C89B
+				&:nth-child(7)
+					.nav-link
+						&:hover 	
+							color: #88c9a4
 		&.navbar-bg
 			padding-top: 0
 			.navbar-brand
@@ -522,11 +579,16 @@ hr
 					height: 42px
 			.navbar-nav
 				font-size: 15px
+				[dir="rtl"] & 
+					font-size: 12.5px
 				.nav-link
 					padding: 18px 0
 				.nav-item
 					+ .nav-item
 						margin-left: 39px
+						[dir="rtl"] & 
+							margin-left: 0
+							margin-right: 39px
 					&:nth-child(1)
 						.nav-link
 							&:hover 	
@@ -616,18 +678,26 @@ hr
 		animation-timing-function: linear
 		animation-iteration-count: infinite
 		animation-duration: 3s
+		[dir="rtl"] &
+			margin-left: 0
+			margin-right: auto
+			transform-origin: left center
 	&:hover
 		opacity: .8
 	&.active
 		&:before
 			transform: rotate(-45deg)
 			width: 32px
+			[dir="rtl"] &
+				transform: rotate(45deg)
 		span
 			width: 0
 			opacity: 0
 		&:after
 			transform: rotate(45deg)
 			width: 32px
+			[dir="rtl"] &
+				transform: rotate(-45deg)
 		span, &:before, &:after
 			animation-name: none !important
 @keyframes sandwich-1
@@ -658,6 +728,9 @@ hr
 		text-shadow: 0 0 29px rgba(0, 0, 0, 0.55)
 		padding-left: 35px
 		position: relative
+		[dir="rtl"] &
+			padding-left: 0 !important
+			padding-right: 35px
 		&:before 
 			content: ''
 			position: absolute
@@ -671,14 +744,21 @@ hr
 			transition: 1s
 			transition-delay: .6s
 			animation: pulse linear infinite 3s
+			[dir="rtl"] &
+				left: auto
+				right: 0
 		@media (max-width: 991.98px)
 			padding-left: 20px
+			[dir="rtl"] &
+				padding-right: 20px
 			&:before 
 				width: 3px
 	.first, .second
 		opacity: 0
 		transition: .5s
 		transform: translateX(20px)
+		[dir="rtl"] &
+			transform: translateX(-20px)
 	.first	
 		margin-bottom: 21px
 	.second 
@@ -700,6 +780,8 @@ hr
 	.heading-1
 		@media (min-width: 992px)
 			padding-left: 52px
+			[dir="rtl"] &
+				padding-right: 52px
 
 .header-2
 	min-height: 100vh
@@ -712,16 +794,28 @@ hr
 	padding-top: 20px
 	padding-left: 20px
 	margin-bottom: -54px
+	[dir="rtl"] &
+		padding-left: 0 !important
+		padding-right: 20px
 	@media (min-width: 992px)
 		padding-left: 52px
+		[dir="rtl"] &
+			padding-right: 52px
 	@media (max-width: 1199.98px)
 		margin-bottom: -46px
 	@media (max-width: 575.98px)
 		padding-top: 10px
 		margin-bottom: -43px
-	.breadcrumb-item + .breadcrumb-item:before
-		content: ">"
-		color: inherit
+	.breadcrumb-item + .breadcrumb-item
+		&:before
+			content: '>'
+			color: inherit
+		[dir="rtl"] &
+			padding-left: 0
+			padding-right: .5rem
+			&:before 
+				padding-right: 0
+				padding-left: .5rem
 	*
 		color: inherit !important
 	a:hover 
@@ -730,7 +824,7 @@ hr
 .pace-done
 	.first, .second, .heading-1:before 
 		opacity: 1
-		transform: none
+		transform: none !important
 
 .section-1
 	position: relative
@@ -741,9 +835,14 @@ hr
 		right: -282px
 		width: 848px
 		z-index: -1
+		[dir="rtl"] &
+			right: auto !important
+			left: -282px
 		@media (max-width: 991.98px)
 			right: -100px
 			width: 600px
+			[dir="rtl"] &
+				left: -100px
 	.img-wrap
 		position: relative
 		&:before
@@ -755,22 +854,31 @@ hr
 			left: 0
 			height: 405px
 			z-index: -1
+			[dir="rtl"] &
+				right: 0 !important
+				left: -40px
+				transform: rotateY(180deg)
 			@media (max-width: 991.98px)
 				height: 200px
 			@media (max-width: 767.98px)
 				top: -20px
 				right: 0
+				[dir="rtl"] &
+					left: -20px
 	.block
 		padding: 84px 74px 46px 63px
-		background: $color-bg url(../img/quote.svg) no-repeat 39px 30px
+		background: $color-bg url(../img/quote.svg) no-repeat
+		background-position: 39px 30px
 		background-size: 118px
 		animation: quote linear infinite 4s
 		@media (max-width: 1499.98px)
-			padding: 40px 30px 24px
+			padding: 40px 30px 24px !important
 		@media (max-width: 575.98px)
-			padding: 30px 15px 12px
+			padding: 30px 15px 12px !important
 			background-position: 20px 20px
 			background-size: 50px
+			[dir="rtl"] &
+				background-position: calc(100% - 20px) 20px
 @keyframes quote
 	50%
 		background-position: 49px 30px
@@ -784,8 +892,11 @@ hr
 	@media (max-width: 991.98px)
 		padding: 70px 0
 	@media (min-width: 992px)
-		.img 	
-			max-width: initial
+		.img-wrap
+			img 	
+				max-width: initial
+				[dir="rtl"] &
+					transform: rotateY(180deg)
 
 .section-3
 	.block
@@ -807,6 +918,10 @@ hr
 				left: 50% !important
 				right: auto
 				transform: translateX(-50%)
+				[dir="rtl"] &
+					left: auto !important
+					right: 50% !important
+					transform: translateX(50%)
 		.scroll
 			height: 30px
 			margin: 21.5px 0
@@ -823,6 +938,9 @@ hr
 				animation-iteration-count: infinite
 				animation-fill-mode: forwards
 				animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1)
+				[dir="rtl"] &
+					border-left: 0
+					border-right: 1px solid 
 			&:before
 				transform-origin: 0 100%
 				animation-name: scroll-1
@@ -846,13 +964,19 @@ hr
 				background-color: $color-info
 				@media (min-width: 992px)
 					margin-left: auto
+					[dir="rtl"] &
+						margin-left: 0
+						margin-right: auto
 			> .block
 				&:before 
 					right: 0
 					background-image: url(../img/bg-1.jpg)
+					[dir="rtl"] &
+						right: auto
+						left: 0
 				.scroll
 					&:before, &:after	
-						border-left-color: $color-warning
+						border-color: $color-warning
 		&:last-child
 			flex-direction: column
 			&:before 
@@ -861,9 +985,12 @@ hr
 				&:before 
 					left: 0
 					background-image: url(../img/bg-2.jpg)
+					[dir="rtl"] &
+						left: auto
+						right: 0
 				.scroll
 					&:before, &:after	
-						border-left-color: $color-info
+						border-color: $color-info
 @keyframes scroll-1
 	0%
 		transform: translateY(0) scaleY(1)
@@ -893,6 +1020,9 @@ hr
 			+ [class*="col"]
 				@media (min-width: 768px)
 					border-left: 1px solid $color-hr
+					[dir="rtl"] &
+						border-left: 0
+						border-right: 1px solid $color-hr
 			> div
 				height: 100%
 				display: flex
@@ -909,6 +1039,9 @@ hr
 		width: 340px
 		top: 175px
 		right: 15px
+		[dir="rtl"] &
+			right: auto
+			left: 15px
 	.owl-1
 		.owl-item img
 			width: auto
@@ -918,8 +1051,14 @@ hr
 			@media (min-width: 768px)
 				.owl-dots
 					right: 0
+					[dir="rtl"] &
+						right: auto
+						left: 0
 				.block
 					margin-left: -118px
+					[dir="rtl"] &
+						margin-left: 0
+						margin-right: -118px
 		&:nth-child(odd)
 			margin-top: 55px
 			.owl-wrap
@@ -927,6 +1066,9 @@ hr
 					flex-direction: row-reverse
 					.block
 						margin-right: -118px
+						[dir="rtl"] &
+							margin-right: auto
+							margin-left: -118px
 		.owl-dots 
 			bottom: 0
 			position: absolute
@@ -944,6 +1086,10 @@ hr
 		.slide
 			position: relative
 			padding: 56px 75px 41px 52px
+			[dir="rtl"] &
+				@media (min-width: 1200px)
+					padding-left: 75px
+					padding-right: 52px
 			@media (max-width: 1199.98px)
 				padding: 50px 30px 20px
 			@media (max-width: 575.98px)
@@ -1144,6 +1290,8 @@ hr
 .section-7
 	position: relative
 	padding-top: 56px
+	.container
+		direction: ltr
 	@media (max-width: 1199.98px)
 		padding-top: 35px
 	> img 
@@ -1152,6 +1300,9 @@ hr
 		top: 46px
 		left: 100px
 		opacity: .4
+		[dir="rtl"] &
+			left: auto
+			right: 100px
 	.img-wrap
 		position: relative
 		overflow: hidden
@@ -1194,9 +1345,14 @@ hr
 		padding: 41.5px 36px
 		margin-top: -60px
 		margin-bottom: 39px
+		[dir="rtl"] &
+			border-left: 0
+			border-right: 12px solid $color-primary
 		@media (max-width: 575.98px)
 			padding: 20px 15px
 			border-left-width: 5px
+			[dir="rtl"] &
+				border-right-width: 5px
 
 .socials
 	li 
@@ -1210,6 +1366,9 @@ hr
 		li 
 			margin-bottom: 0
 			margin-right: 18px
+			[dir="rtl"] &
+				margin-right: 0
+				margin-left: 18px
 
 .section-9
 	padding: 111px 0 84px
@@ -1223,9 +1382,15 @@ hr
 		&.img-1
 			top: 271px
 			right: 237px
+			[dir="rtl"] &
+				right: auto
+				left: 237px
 		&.img-2
 			top: 529px
 			right: -131px
+			[dir="rtl"] &
+				right: auto
+				left: -131px
 
 .accordion
 	.item
@@ -1237,6 +1402,9 @@ hr
 			color: inherit
 			position: relative
 			padding: 15px 2rem 15px 0
+			[dir="rtl"] &
+				padding-left: 2rem
+				padding-right: 0
 			@media (min-width: 992px)
 				font-size: 30px
 			&:hover
@@ -1252,6 +1420,10 @@ hr
 				height: 11px
 				background-image: url(../img/angle-right.svg)
 				background-size: cover
+				[dir="rtl"] &
+					right: auto
+					left: 0
+					transform: translateY(-50%) rotate(90deg)
 			&[aria-expanded="true"]
 				color: $color-primary
 				&:after
@@ -1270,10 +1442,16 @@ hr
 			position: relative
 			padding: 18px 74px 18px 30px
 			background-color: $color-bg-3
+			[dir="rtl"] &
+				padding-left: 74px
+				padding-right: 30px
 			@media (min-width: 992px)
 				font-size: 27px
 			@media (max-width: 575.98px)
 				padding: 10px 60px 10px 1rem
+				[dir="rtl"] &
+					padding-left: 60px
+					padding-right: 1rem
 			> * 
 				vertical-align: middle
 			&:before 
@@ -1285,6 +1463,9 @@ hr
 				vertical-align: middle
 				transition: $transition
 				margin-right: 1rem
+				[dir="rtl"] &
+					margin-right: 0
+					margin-left: 1rem
 			&:after
 				content: ''
 				position: absolute
@@ -1301,8 +1482,16 @@ hr
 				background-repeat: no-repeat
 				background-position: center 53%
 				margin-left: 1rem
+				[dir="rtl"] &
+					right: auto
+					left: 30px
+					margin-left: 0
+					margin-right: 1rem
+					transform: translateY(-50%) rotate(90deg)
 				@media (max-width: 575.98px)	
 					right: 1rem
+					[dir="rtl"] &
+						left: 1rem
 			&:hover, &[aria-expanded="true"]
 				color: #fff
 				background-color: $color-primary
@@ -1357,11 +1546,17 @@ hr
 		border: 2px solid $color-primary
 		background-color: #f6f6f6
 		padding: 20.5px 126px 20.5px 51px
+		[dir="rtl"] &
+			padding-left: 126px
+			padding-right: 51px
 		&:focus 
 			box-shadow: 0 0 0 0.25rem rgba(96, 45, 145, .25)
 		@media (max-width: 991.98px)
 			font-size: 20px
 			padding: 1rem 64px 1rem 22px
+			[dir="rtl"] &
+				padding-left: 64px
+				padding-right: 22px
 	.fas 
 		font-size: 32px
 		position: absolute
@@ -1373,16 +1568,23 @@ hr
 		transform: translateY(-50%)
 		color: rgba(51, 51, 51, 0.32)
 		transition: $transition
+		[dir="rtl"] &
+			right: auto
+			left: 47px
 		&:hover
 			color: $color-primary
 		@media (max-width: 991.98px)
 			font-size: 26px
 			right: 22px
+			[dir="rtl"] &
+				left: 22px
 
 .section-10
 	padding: 106px 0 121px
 	@media (max-width: 1199.98px)
 		padding: 70px 0
+	> .container 
+		position: relative
 
 .block
 	.img-wrap
@@ -1390,6 +1592,8 @@ hr
 		display: inline-block
 		img 
 			transform: rotateY(180deg)
+			[dir="rtl"] &
+				transform: none
 			@media (min-width: 992px)
 				max-width: none
 		.play 
@@ -1403,12 +1607,20 @@ hr
 			border: 5px solid #fff
 			border-radius: 100px
 			z-index: 9
+			[dir="rtl"] &
+				left: auto
+				right: 50%
+				transform: translate(-49%, -75%)
 			@media (max-width: 991.98px)
 				width: 90px
 				height: 90px
 				transform: translate(25%, -75%)
+				[dir="rtl"] &
+					transform: translate(-25%, -75%)
 			@media (max-width: 575.98px)
 				transform: translate(-10%, -65%)
+				[dir="rtl"] &
+					transform: translate(10%, -65%)
 			&:hover 
 				opacity: .8
 
@@ -1422,18 +1634,28 @@ hr
 		margin-top: -113px
 		@media (min-width: 992px)
 			direction: rtl
+			[dir="rtl"] &
+				direction: ltr
 		.img-1
 			position: absolute
 			top: 87px
 			left: 23px
 			transform: rotate(27deg)
 			width: 17.8%
+			[dir="rtl"] &
+				left: auto
+				right: 23px
+				transform: rotate(-27deg)
 		.img-2
 			position: absolute
 			bottom: 33px
 			left: 23px
 			transform: rotate(-29deg)
 			width: 38.3%
+			[dir="rtl"] &
+				left: auto
+				right: 23px
+				transform: rotate(29deg)
 			@media (max-width: 991.98px)
 				width: 25%
 	.fz-33 
@@ -1450,8 +1672,12 @@ hr
 		margin-bottom: -33px
 		z-index: 2
 		padding: 47px 79px 38px 0
+		[dir="rtl"] &
+			padding: 47px 0 38px 79px
 		@media (max-width: 992.98px)
 			padding: 30px 50px 30px 0
+			[dir="rtl"] &
+				padding: 30px 0 30px 50px
 		&:before 
 			content: ''
 			position: absolute
@@ -1461,6 +1687,9 @@ hr
 			width: 100vw
 			background-color: $color-bg
 			z-index: -1
+			[dir="rtl"] &
+				right: auto
+				left: 0
 	.block-2
 		padding: 117px 0 96px
 		@media (max-width: 1199.98px)
@@ -1470,9 +1699,14 @@ hr
 	.img 
 		max-width: none
 		margin-top: -212px
+		[dir="rtl"] &
+			transform: rotateY(180deg)
 		@media (min-width: 1600px)
 			position: relative
 			left: 160px
+			[dir="rtl"] &
+				left: auto
+				right: 160px
 		@media (max-width: 1199.98px)
 			width: 560px
 
@@ -1485,6 +1719,10 @@ hr
 		width: 325px
 		left: calc(100% - 172px)
 		bottom: calc(100% - 150px)
+		[dir="rtl"] &
+			left: auto
+			right: calc(100% - 172px)
+			transform: rotateY(180deg)
 		@media (max-width: 767.98px)
 			display: none
 	.img-wrap
@@ -1492,6 +1730,10 @@ hr
 			direction: rtl 
 			img 
 				max-width: initial
+			[dir="rtl"] &
+				direction: ltr
+				img
+					transform: rotateY(180deg)
 
 .section-14
 	padding-bottom: 77px
@@ -1513,6 +1755,9 @@ hr
 				bottom: 0
 				width: 100vw
 				background-color: $color-bg-3
+				[dir="rtl"] &
+					right: auto
+					left: -9px
 	.col-right
 		position: static
 		&:before 	
@@ -1523,6 +1768,10 @@ hr
 			width: 43%
 			background-image: linear-gradient(284deg, $color-danger, $color-warning)
 			animation: width2 linear infinite 20s
+			[dir="rtl"] &
+				right: auto
+				left: 0
+				transform: rotateY(180deg)
 	.owl-2
 		padding-top: 117px
 		@media (max-width: 1199.98px)
@@ -1572,16 +1821,24 @@ hr
 			left: -109px
 			background-image: url(../img/png-1.png)
 			animation: anim-3 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
+			[dir="rtl"] &
+				left: auto
+				right: -109px
 		&:after
 			top: 1057px
 			right: -115px
 			background-image: url(../img/png-2.png)
 			animation: anim-4 40s infinite linear
+			[dir="rtl"] &
+				right: auto
+				left: -115px
 		.img-wrap
 			.img 
 				max-width: none
 				position: absolute
 				transform: translateY(-50%)
+				[dir="rtl"] &
+					transform: translateY(-50%) rotateY(180deg)
 	.block 
 		@media (min-width: 768px)
 			position: relative
@@ -1594,6 +1851,9 @@ hr
 				border-bottom: 1px solid #d5d5d5
 				bottom: 0
 				left: 100px
+				[dir="rtl"] &
+					left: auto
+					right: 100px
 				@media (max-width: 1199.98px)
 					width: 396px
 				@media (max-width: 991.98px)
@@ -1608,6 +1868,12 @@ hr
 					border-radius: 100px
 					background-color: #d5d5d5
 					margin-left: -4px
+					animation: dot 5s infinite linear
+					[dir="rtl"] &
+						left: auto
+						right: 100px
+						margin-left: 0
+						margin-right: -4px
 					&.dot-1
 						top: 0
 					&.dot-2
@@ -1618,6 +1884,9 @@ hr
 					height: 70px
 					border-left: 1px solid #d5d5d5
 					left: 100px
+					[dir="rtl"] &
+						left: auto
+						right: 100px
 				&:before 
 					bottom: 100%
 				&:after 
@@ -1632,6 +1901,10 @@ hr
 					line-height: .72
 					color: $color-bg-3
 					z-index: -1
+					animation: letter 10s infinite linear
+					[dir="rtl"] &
+						left: auto
+						right: -100px
 		&:nth-child(odd)
 			.img-wrap
 				@media (min-width: 768px)
@@ -1643,6 +1916,9 @@ hr
 				.img-wrap
 					text-align: right
 					direction: rtl
+					[dir="rtl"] &
+						text-align: left
+						direction: ltr
 				.block-1 
 					&:before, &:after 
 						height: 200px
@@ -1660,8 +1936,13 @@ hr
 						content: 'B'
 			.play 
 				left: 0
+				[dir="rtl"] &
+					left: auto
+					right: 0
 				@media (max-width: 767.98px)
 					left: 30%
+					[dir="rtl"] &
+						right: 30%
 		&:nth-child(3)
 			.block-1 
 				.letter
@@ -1676,6 +1957,9 @@ hr
 					position: absolute
 					bottom: 13px
 					margin-right: 60px
+					[dir="rtl"] &
+						margin-right: 0
+						margin-left: 60px
 			.block-1 
 				.letter
 					&:before 
@@ -1687,6 +1971,12 @@ hr
 			.block-1 
 				&:after 
 					display: none
+@keyframes dot
+	50%
+		transform: scale(1.5)
+@keyframes letter
+	50%
+		transform: translateX(50px)
 
 .section-17
 	padding: 91px 0 108px
@@ -1709,6 +1999,9 @@ hr
 		right: -178px
 		width: 798px
 		z-index: -1
+		[dir="rtl"] &
+			right: auto
+			left: -178px
 		@media (max-width: 991.98px)
 			display: none
 	@media (min-width: 768px)
@@ -1719,6 +2012,10 @@ hr
 		top: 85px
 		left: 26%
 		max-width: 53%
+		[dir="rtl"] &
+			@media (min-width: 768px)
+				left: auto
+				right: 74%
 		@media (max-width: 767.98px)
 			left: 10%
 			max-width: 30%
@@ -1746,6 +2043,10 @@ hr
 		position: relative
 		padding: 14px 95px 13px 0
 		margin-bottom: 51px
+		white-space: nowrap
+		[dir="rtl"] &
+			padding-left: 95px
+			padding-right: 0
 		&:before 	
 			content: ''
 			position: absolute
@@ -1754,6 +2055,9 @@ hr
 			bottom: 0
 			width: 100vw
 			z-index: -1
+			[dir="rtl"] &
+				right: auto
+				left: 0
 		&.block-1
 			&:before
 				background-color: $color-warning
@@ -1768,6 +2072,10 @@ hr
 		.line-wrap
 			position: relative
 			background: url(../img/svg/line.svg) no-repeat center center
+			[dir="rtl"] &
+				transform: rotateY(180deg)
+				> *
+					transform: rotateY(180deg)
 			[class*="col"]
 				+ [class*="col"]
 					&:before 
@@ -1780,6 +2088,10 @@ hr
 						transform: translate(-50%, -50%)
 						background: url(../img/svg/line.png)
 						background-size: cover
+						[dir="rtl"] &
+							left: auto
+							right: 0
+							transform: translate(50%, -50%) rotateY(180deg)
 
 .section-21
 	padding: 104px 0 82px
@@ -1807,6 +2119,11 @@ hr
 		background: url(../img/image-3.png) no-repeat right bottom 
 	@media (max-width: 1199.98px)
 		padding: 70px 0 54px
+	[dir="rtl"] &
+		.row
+			direction: ltr
+			> [class*="col"]
+				direction: rtl
 	.ellipse-wrap
 		position: absolute
 		@media (max-width: 991.98px)
@@ -1845,9 +2162,13 @@ hr
 		background-color: $color-warning
 		margin-right: -20px
 		animation: round 5s infinite linear
+		[dir="rtl"] &
+			margin-right: 0
+			margin-left: -20px
 @keyframes round
 	50%
 		margin-right: 0
+		margin-left: 0
 
 .box
 	display: flex
@@ -1860,6 +2181,9 @@ hr
 	position: relative
 	padding: 25px 20px
 	min-height: 180px
+	[dir="rtl"] &
+		margin-left: 0
+		margin-right: 10px
 	@media (min-width: 1200px)		
 		padding: 40px 37px 34px
 		min-height: 300px
@@ -1873,8 +2197,11 @@ hr
 		line-height: .64
 		color: $color-bg-3
 		position: absolute
-		right: -5px
+		right: 0
 		bottom: 0
+		[dir="rtl"] &
+			right: auto
+			left: 0
 	&:after 
 		content: ''
 		position: absolute
@@ -1887,6 +2214,8 @@ hr
 		transform: translate(-10px, 10px)
 		background-color: $color-warning-2
 		z-index: -1
+		[dir="rtl"] &
+			transform: translate(10px, 10px)
 	&:hover 
 		&:after 	
 			transform: none
@@ -1947,6 +2276,10 @@ hr
 	@media (min-width: 1200px)
 		.row
 			min-height: 541px
+			[dir="rtl"] &
+				direction: ltr
+				> [class*="col"]
+					direction: rtl
 .section-23
 	padding: 110px 0 89px
 	@media (min-width: 992px)
@@ -2021,6 +2354,9 @@ hr
 		padding: 40px 38px 10px
 	.close
 		margin-left: auto !important
+		[dir="rtl"] &	
+			margin-left: 0 !important
+			margin-right: auto !important
 @media (min-width: 992px)
 	.modal-body
 		padding: 10px 53px 80px
@@ -2030,6 +2366,105 @@ hr
 	background-color: #fff
 	&.show
 		opacity: .95
+
+#play-pause
+	position: fixed
+	left: 15px
+	bottom: 15px
+	width: 30px
+	height: 30px
+	line-height: 30px
+	color: #fff
+	text-align: center
+	background: linear-gradient(to right, $color-danger, $color-warning)
+	cursor: pointer
+	z-index: 9
+	transition: $transition
+	[dir="rtl"] &
+		left: auto 
+		right: 15px
+	&:hover 
+		opacity: .8
+	&:after 
+		content: ''
+		position: absolute
+		top: 14px
+		left: 3px
+		width: 25px
+		border-top: 2px solid
+		transform: rotate(45deg)
+		transition: $transition
+		opacity: 0
+	&.active 
+		&:after
+			opacity: 1
+	iframe 
+		display: none
+	audio 
+		display: none
+
+[dir="rtl"]
+	body 
+		text-align: right
+	.text-left 
+		text-align: right !important
+	.text-right 
+		text-align: left !important
+	.ml-2
+		margin-left: 0 !important
+		margin-right: .5rem !important
+	.ml-auto
+		margin-left: 0 !important
+		margin-right: auto !important
+	.mr-auto
+		margin-right: 0 !important
+		margin-left: auto !important
+	.list-unstyled
+		padding-right: 0
+	.nav 
+		padding-right: 0
+	.navbar-nav
+		padding-right: 0
+	.navbar-brand
+		margin-right: 0
+		margin-left: 1rem
+	.dropdown-menu
+		left: auto
+		right: 0
+		text-align: right
+		font-size: inherit
+	@media (min-width: 576px)
+		.text-sm-left
+			text-align: right !important
+		.text-sm-right
+			text-align: left !important
+		.ml-sm-3
+			margin-left: 0 !important
+			margin-right: 1rem !important
+	@media (min-width: 768px)
+		.text-md-left
+			text-align: right !important
+		.text-md-right
+			text-align: left !important
+	@media (min-width: 992px)
+		.text-lg-left
+			text-align: right !important
+		.text-lg-right
+			text-align: left !important
+		.ml-lg-auto
+			margin-left: 0 !important
+			margin-right: auto !important
+	@media (min-width: 1200px)
+		.text-xl-left
+			text-align: right !important
+		.text-xl-right
+			text-align: left !important
+		.pr-xl-4
+			padding-right: 0 !important
+			padding-left: 1.5rem !important
+		.mr-xl-2
+			margin-right: 0 !important
+			margin-left: .5rem !important
 
 
 
