@@ -295,7 +295,7 @@ hr
 	font-size: 0
 
 .baseet
-	font-family: 'Baseet'
+	font-family: 'Baseet', 'Droid Arabic Kufi', sans-serif
 
 .font-weight-semibold
 	font-weight: 600
@@ -718,10 +718,10 @@ hr
 	background-size: cover
 	display: flex
 	flex-direction: column
-	min-height: 100vh
+	height: 100vh
 	> .container
 		padding-top: 209px
-		padding-bottom: 100px
+		padding-bottom: 115px
 		margin-top: auto
 		margin-bottom: auto
 	.heading-1
@@ -769,12 +769,11 @@ hr
 		bottom: -10px
 
 .header-1
-	min-height: 500px
+	height: 500px
 	> .container
-		padding-bottom: 115px
 		margin-bottom: 0
 	@media (max-width: 575.98px)
-		min-height: 400px
+		height: 400px
 		> .container
 			padding-bottom: 80px
 	.heading-1
@@ -784,7 +783,7 @@ hr
 				padding-right: 52px
 
 .header-2
-	min-height: 100vh
+	height: 100vh
 
 .breadcrumb
 	background-color: transparent
@@ -894,7 +893,7 @@ hr
 	@media (min-width: 992px)
 		.img-wrap
 			img 	
-				max-width: initial
+				max-width: inherit
 				[dir="rtl"] &
 					transform: rotateY(180deg)
 

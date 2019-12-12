@@ -97,31 +97,39 @@ main {
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Light.otf");
+  src: url(../fonts/ProximaNova-Light.eot);
+  src: url(../fonts/ProximaNova-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Light.woff2) format("woff2"), url(../fonts/ProximaNova-Light.woff) format("woff"), url(../fonts/ProximaNova-Light.ttf) format("truetype");
   font-weight: 300; }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Regular.otf");
+  src: url(../fonts/ProximaNova-Regular.eot);
+  src: url(../fonts/ProximaNova-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Regular.woff2) format("woff2"), url(../fonts/ProximaNova-Regular.woff) format("woff"), url(../fonts/ProximaNova-Regular.ttf) format("truetype");
   font-weight: normal; }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Semibold.otf");
+  src: url(../fonts/ProximaNova-Semibold.eot);
+  src: url(../fonts/ProximaNova-Semibold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Semibold.woff2) format("woff2"), url(../fonts/ProximaNova-Semibold.woff) format("woff"), url(../fonts/ProximaNova-Semibold.ttf) format("truetype");
   font-weight: 600; }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Bold.otf");
+  src: url(../fonts/ProximaNova-Bold.eot);
+  src: url(../fonts/ProximaNova-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Bold.woff2) format("woff2"), url(../fonts/ProximaNova-Bold.woff) format("woff"), url(../fonts/ProximaNova-Bold.ttf) format("truetype");
   font-weight: bold; }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Extrabold.otf");
+  src: url(../fonts/ProximaNova-Extrabold.eot);
+  src: url(../fonts/ProximaNova-Extrabold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Extrabold.woff2) format("woff2"), url(../fonts/ProximaNova-Extrabold.woff) format("woff"), url(../fonts/ProximaNova-Extrabold.ttf) format("truetype");
   font-weight: 800; }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima-Nova-Black.otf");
+  src: url("../fonts/ProximaNova-Black.otf");
+  src: url(../fonts/ProximaNova-Black.eot);
+  src: url(../fonts/ProximaNova-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNova-Black.woff2) format("woff2"), url(../fonts/ProximaNova-Black.woff) format("woff"), url(../fonts/ProximaNova-Black.ttf) format("truetype");
   font-weight: 900; }
 @font-face {
   font-family: "Baseet";
-  src: url("../fonts/29LTBaseet-Bold.OTF");
+  src: url(../fonts/29LTBaseet-Bold.eot);
+  src: url(../fonts/29LTBaseet-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/29LTBaseet-Bold.woff2) format("woff2"), url(../fonts/29LTBaseet-Bold.woff) format("woff"), url(../fonts/29LTBaseet-Bold.ttf) format("truetype");
   font-weight: 700; }
 @font-face {
   font-family: "Droid Arabic Kufi";
@@ -413,7 +421,7 @@ hr {
   font-size: 0; }
 
 .baseet {
-  font-family: "Baseet"; }
+  font-family: "Baseet", "Droid Arabic Kufi", sans-serif; }
 
 .font-weight-semibold {
   font-weight: 600; }
@@ -785,10 +793,10 @@ hr {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  height: 100vh; }
   .main-header > .container {
     padding-top: 209px;
-    padding-bottom: 100px;
+    padding-bottom: 115px;
     margin-top: auto;
     margin-bottom: auto; }
   .main-header .heading-1 {
@@ -837,13 +845,12 @@ hr {
     top: -10px;
     bottom: -10px; } }
 .header-1 {
-  min-height: 500px; }
+  height: 500px; }
   .header-1 > .container {
-    padding-bottom: 115px;
     margin-bottom: 0; }
   @media (max-width: 575.98px) {
     .header-1 {
-      min-height: 400px; }
+      height: 400px; }
       .header-1 > .container {
         padding-bottom: 80px; } }
   @media (min-width: 992px) {
@@ -853,7 +860,7 @@ hr {
         padding-right: 52px; } }
 
 .header-2 {
-  min-height: 100vh; }
+  height: 100vh; }
 
 .breadcrumb {
   background-color: transparent;
@@ -969,7 +976,7 @@ hr {
       padding: 70px 0; } }
   @media (min-width: 992px) {
     .section-2 .img-wrap img {
-      max-width: initial; }
+      max-width: inherit; }
       [dir="rtl"] .section-2 .img-wrap img {
         transform: rotateY(180deg); } }
 
