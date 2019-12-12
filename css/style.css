@@ -560,7 +560,8 @@ hr {
     margin-bottom: 0.3125rem; }
     .navbar .navbar-brand img {
       transition: 0.3s;
-      height: 51px; }
+      height: 51px;
+      width: 303px; }
       .navbar .navbar-brand img.logo-white {
         opacity: 0;
         position: absolute;
@@ -677,7 +678,8 @@ hr {
       .navbar.navbar-bg {
         padding-top: 0; }
         .navbar.navbar-bg .navbar-brand img {
-          height: 42px; }
+          height: 42px;
+          width: 250px; }
         .navbar.navbar-bg .navbar-nav {
           font-size: 15px; }
           [dir="rtl"] .navbar.navbar-bg .navbar-nav {
@@ -1814,7 +1816,7 @@ hr {
     .section-13 .img-wrap {
       direction: rtl; }
       .section-13 .img-wrap img {
-        max-width: initial; }
+        max-width: inherit; }
       [dir="rtl"] .section-13 .img-wrap {
         direction: ltr; }
         [dir="rtl"] .section-13 .img-wrap img {
