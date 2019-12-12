@@ -1203,7 +1203,7 @@ hr {
     left: 50%;
     transform: translateX(-50%); }
     .section-6 > span img {
-      max-width: initial; }
+      max-width: inherit; }
   .section-6 .block {
     margin-top: 107px;
     padding: 75px 15px 47px;
@@ -2085,7 +2085,7 @@ hr {
         display: none; } }
   @media (min-width: 768px) {
     .section-18 .img {
-      max-width: initial; } }
+      max-width: 1000%; } }
   .section-18 .img-1 {
     position: absolute;
     top: 85px;
@@ -2112,7 +2112,7 @@ hr {
     left: 50%;
     transform: translateX(-50%); }
     .section-19 > span img {
-      max-width: initial; }
+      max-width: inherit; }
 
 .section-20 {
   padding: 30px 0 43px;
