@@ -2142,8 +2142,7 @@ hr {
     display: inline-block;
     position: relative;
     padding: 14px 95px 13px 0;
-    margin-bottom: 51px;
-    white-space: nowrap; }
+    margin-bottom: 51px; }
     [dir="rtl"] .section-20 .block {
       padding-left: 95px;
       padding-right: 0; }
