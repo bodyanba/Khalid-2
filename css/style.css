@@ -1492,6 +1492,17 @@ hr {
       [dir="rtl"] .section-9 > img.img-2 {
         right: auto;
         left: -131px; }
+  .section-9 .nav-pills {
+    margin-left: -5px;
+    margin-right: -5px; }
+    .section-9 .nav-pills .nav-link {
+      padding: 0 5px;
+      font-size: 12px;
+      margin-bottom: 0.5rem; }
+      .section-9 .nav-pills .nav-link.active {
+        background-color: transparent;
+        color: initial;
+        font-weight: inherit; }
 
 .accordion .item + .item {
   border-top: 1px solid #e9e9e9; }
