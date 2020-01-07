@@ -1492,17 +1492,38 @@ hr {
       [dir="rtl"] .section-9 > img.img-2 {
         right: auto;
         left: -131px; }
+  .section-9 .container {
+    position: relative; }
   .section-9 .nav-pills {
-    margin-left: -5px;
-    margin-right: -5px; }
+    margin-left: -10px;
+    margin-right: -10px; }
+    .section-9 .nav-pills .nav-item {
+      flex-grow: 1;
+      flex-basis: 0; }
+      .section-9 .nav-pills .nav-item + .nav-item {
+        border-left: 1px solid #dfdfdf; }
     .section-9 .nav-pills .nav-link {
-      padding: 0 5px;
+      padding: 10px;
       font-size: 12px;
-      margin-bottom: 0.5rem; }
+      color: rgba(34, 34, 34, 0.5);
+      height: 100%; }
+      .section-9 .nav-pills .nav-link img {
+        height: 60px;
+        margin-bottom: 0.5rem;
+        filter: grayscale(100);
+        opacity: 0.3;
+        transition: 0.3s; }
+      .section-9 .nav-pills .nav-link:hover {
+        color: #222222; }
+        .section-9 .nav-pills .nav-link:hover img {
+          opacity: 1; }
       .section-9 .nav-pills .nav-link.active {
         background-color: transparent;
-        color: initial;
+        color: inherit;
         font-weight: inherit; }
+        .section-9 .nav-pills .nav-link.active img {
+          filter: none;
+          opacity: 1; }
 
 .accordion .item + .item {
   border-top: 1px solid #e9e9e9; }
